@@ -1,0 +1,19 @@
+\subsubsection{Conditional Independence \& Complements}\topline
+Let $A$ and $B$ be \textbf{independent and conditionally independent} given $C$. Let $P(C), P(C^c) > 0$ \\
+$\then A$ and $B^c$ are guaranteed to be conditionally independent given $C$. Proof:\\ \vspace{1mm}
+
+We need to get to the target equation: $P(A \cap B^c | C) = P(A|C)P(B^c|C)$. Notice that:\\
+$P(B) + P(B^c) = 1 \then P(B|C) + P(B^c|C) = 1 \then P(B^c|C)=1-P(B|C)$. \\
+Now, $(A\cap B)$ and $(A \cap B^c)$ are disjoint events (they can't both occur) $\then (A\cap B) \cup (A \cap B^c) = A$
+(this can be proven using the properties of sets, but try to see it intuitively). Therefore $P(A \cap B^c|C) = P(A|C) - P(A\cap B|C)$.\\ \vspace{1mm}
+
+Considering the assumptions, the target equation can now be expressed as:\\
+$P(A|C) - P(A\cap B|C) = P(A|C)[1 - P(B|C)]$\\
+$P(A|C) - P(A|B)P(B|C) = P(A|C) - P(A|C)P(B|C) \qed$
+
+\vspace{1mm}
+\topline
+$A$ and $B$ are not guaranteed to be conditionally independent given $C^c$. This may be true in some special cases, e.g., if $P(A)=0$ and $P(B)=0$.
+However, it is in general false. Suppose, for example, that events $A$ and $B$ have nonempty intersection inside $C$,
+and are conditionally independent, but have empty intersection inside $C^c$ , which would make them dependent (given $C^c$).
+^^E^^L 

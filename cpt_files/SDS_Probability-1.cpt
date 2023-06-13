@@ -1,0 +1,50 @@
+\subsubsection{Sample Space}\topline
+Let the sample space $\Omega=\{\omega_1, \dots, \omega_n\}$ be the set of  all possible outcomes of an experiment or random trial.
+Let $\omega_i \in \Omega$ be a particular sample point or outcome.\\
+\vspace{1.25mm}
+In order to be a sample space, the set $\{\omega_1, \dots, \omega_n\}$ must meet certain conditions:
+\begin{figure}[H]
+^^I\begin{minipage}{1.75cm}
+^^I^^I\centering
+^^I^^I\begin{tikzpicture}
+^^I^^I^^I\begin{axis}[
+^^I^^I^^I^^Ihide axis,       % hide the axis
+^^I^^I^^I^^Ixmin=0, xmax=1,  % set the x limits
+^^I^^I^^I^^Iymin=0, ymax=1,  % set the y limits
+^^I^^I^^I^^Iclip=false,      % prevent clipping
+^^I^^I^^I^^Iwidth=3cm,      % width of the plot
+^^I^^I^^I^^Iheight=3.2cm,     % height of the plot
+^^I^^I^^I]
+^^I^^I
+^^I^^I^^I% scatter plot of 10 specified points
+^^I^^I^^I\addplot [
+^^I^^I^^I^^Ionly marks,
+^^I^^I^^I^^Imark=*,
+^^I^^I^^I^^Imark size=2pt,   % size of the dots
+^^I^^I^^I^^Idraw=black,         % color of the dot border
+^^I^^I^^I^^Ifill=darkblue!80           % color of the dot interior
+^^I^^I^^I]
+^^I^^I^^Icoordinates {
+^^I^^I^^I^^I(0.15, 0.15)(0.2, 0.3)(0.3, 0.5)(0.5, 0.75)(0.5, 0.2)
+^^I^^I^^I^^I(0.6, 0.4)(0.7, 0.6)(0.8, 0.2)(0.85, 0.85)(0.2, 0.8)
+^^I^^I^^I};
+^^I^^I
+^^I^^I^^I% box
+^^I^^I^^I\draw[line width=0.1mm] (axis cs:0,0) rectangle (axis cs:1,1);
+^^I^^I^^I\end{axis}
+^^I^^I\end{tikzpicture}
+^^I^^I\end{minipage}%
+^^I^^I\begin{minipage}{6.5cm}
+^^I^^I^^I\tiny{
+^^I^^I^^I^^IOutcomes must be \textbf{Mutually Exclusive},  i.e. if $\omega_i$ occurs, then no other $\omega_j$ will take place.
+^^I^^I^^I^^I$\forall i,j=1 \dots n , i \neq j.$
+^^I^^I^^I^^I\\ \vspace{0.1mm} \\
+^^I^^I^^I^^IOutcomes must be \textbf{Collectively Exhaustive}, i.e. on every experiment or trial, the outcome must be only $\omega_i \in \Omega.$
+^^I^^I^^I^^I\\ \vspace{0.1mm} \\
+^^I^^I^^I^^IThe set must be at a \textbf{Right Granularity}, depending on what the experimenter is interested in.
+^^I^^I^^I^^IIrrelevant information must be removed from the set and the right abstraction must be chosen.
+^^I^^I^^I}
+^^I^^I\end{minipage}
+\end{figure}
+
+^^E^^L 

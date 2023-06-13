@@ -1,0 +1,14 @@
+\subsubsection{Independence of Two Events}\topline
+Intuitive definition: $P(B|A)=P(B) \then$ The ocurrence of $A$ gives no new information about $B$.\\
+\vspace{1.5mm}
+Formal definition:\\
+{\centering\fbox{%
+\begin{minipage}{0.4\linewidth}
+Two events are independent if:\\ \vspace{-0.5mm}
+\begin{equation*}
+    P(A \cap B) = P(A)P(B)
+\end{equation*}
+\end{minipage}}\\}%
+\vspace{1.5mm}
+This definition symmetrically implies both $P(B|A)=P(B)$ and $P(A|B)=P(A)$ and works even when $P(A)=0$.\\
+^^E^^L 

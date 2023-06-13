@@ -1,0 +1,14 @@
+\subsubsection{Conditional Independence}\topline
+{\centering\fbox{%
+\begin{minipage}{0.7\linewidth}
+Given an event $C$, events $A$ and $B$ are conditionally independent if:\\ \vspace{-0.5mm}
+\begin{equation*}
+    P(A \cap B | C) = P(A|C)P(B|C)
+\end{equation*}
+\end{minipage}}\\}%
+\vspace{1.5mm}
+Now, notice that by the Bayes' Rule and Multiplication Rule: \\\vspace{1mm}
+$P(A\cap B|C) = \frac{P(A \cap B \cap C)}{P(B)}  = \frac{P(C)P(B|C)P(A|B \cap C)}{P(C)}= P(B|C)P(A|B\cap C)$ \\\vspace{1mm}
+So conditional independence also implies: \, \boxed{P(A|B \cap C) = P(A|C)} \\ \vspace{1mm}
+In words, this relation states that if $C$ is known to have occurred, the additional knowledge that $B$ also occurred does not change the probability of $A$.
+^^E^^L 

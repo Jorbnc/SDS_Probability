@@ -1,0 +1,4 @@
+\subsubsection{Events}\topline
+An event $A$ is a \textbf{subset} of the sample space $\Omega$, $\rightarrow A \subset \Omega $, i.e. an event $A$ is a set of outcomes itself. \\
+Probability is assigned to events, $P(A)$. If events weren't defined in terms of subsets (sets), handling individual sample points in continuous sample spaces would be complicated. \\
+^^E^^L 

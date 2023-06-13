@@ -1,0 +1,7 @@
+\subsubsection{Discrete and Continuous, Finite and Infinite Sample Spaces}\topline
+\begin{itemize}
+^^I\item Discrete and Finite $\rightarrow$ Throwing 2 regular dice once:  $|\Omega|=6 \times 6=36$
+^^I\item Discrete and Infinite $\rightarrow$ Guessing a natural number (?)
+^^I\item Continuous and Infinite $\rightarrow$ The (x,y) coordinates of the landing of a dart
+\end{itemize}
+^^E^^L 

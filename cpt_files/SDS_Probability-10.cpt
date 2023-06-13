@@ -1,0 +1,12 @@
+\subsubsection{Countable Additivity Axiom}\topline
+If $A_{1}, A_{2},...$ is an infinite \textbf{sequence} of disjoint events, then:
+\bcentering{P(A_{1} \cup A_{2} \cup A_{3} \cup ...) = P(A_{1}) + P(A_{2}) + P(A_{3}) + ...}
+The word sequence is important here since it's necessary to be able to arrange the events in some order.\\
+\vspace{1.5mm}
+Consider the following case:
+The sample space consists of the unit square, the probability of a set/event is its area. Now, consider the probability of the whole $\Omega$ as the probability of the union
+of all the $(x,y)$ points: $P(\Omega) = 1 = P\left(\bigcup \{(x,y)\}\right) = \sum P(\{x,y\}) = \sum 0 = 0$, we arrived to a seemingly contradiction because the elements of
+the unit square (i.e. $(x,y)$ sets) can't be arranged in a sequence $\rightarrow$ The unit square is an uncountable set.\\
+\vspace{1.5mm}
+The proof for "countable/discrete = can be arranged in a sequence, uncountable/continous = can't be arranged in a sequence" is said to be found in Measure Theory.
+^^E^^L 

@@ -1,0 +1,12 @@
+\subsubsection{Probability Model}\topline
+Bertsekas \& Tsitsiklis definition: A Probabilistic Model is a mathematical description of an uncertain situation. It is composed of two main \textit{ingredients}: A Sample Space and
+a Probility Law that specifies the likelihood of events.\\
+\vspace{2mm}
+\textbf{Probability Law:} The logic by which likelihood of outcomes is defined or assigned.\\
+Consider the probability of hitting any subset of a $1\times 1$ square. $P(x,y) : 0 \leq x, y \leq 1 \rightarrow$ The probability of any particular subset of $\Omega$ is just its area (Uniform Probability).\\
+\vspace{2mm}
+For completeness (Sample Space, \textbf{Probability Space}, Probability Model):\\
+-\url{https://stats.stackexchange.com/questions/199280/why-do-we-need-sigma-algebras-to-define-probability-spaces}\\
+-\url{https://math.stackexchange.com/questions/2002416/defining-the-sigma-algebra-of-events-of-a-probability-space}\\
+-\url{https://en.wikipedia.org/wiki/Probability_space}
+^^E^^L 

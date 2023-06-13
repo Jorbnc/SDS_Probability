@@ -1,0 +1,38 @@
+\subsubsection{Total Probability Rule}\topline
+\begin{itemize}
+^^I\item Consider a partition of $\Omega$ into $A_{i}$ events. Since it's a partition, events are disjoint.
+^^I\item Let's say we have a probability model for $A_{i}$.
+^^I\item We have also modeled $P(B)$ for each scenario, i.e. $P(B|A_{i})$
+^^I\item We can use \textbf{finite additivity} in order to calculate $P(B)$
+\end{itemize}
+\vspace{-1.5mm}
+\begin{minipage}{0.34\linewidth}
+^^I\centering
+^^I\begin{tikzpicture}[scale=0.8]
+^^I^^I\begin{scope}[line width=0.1mm]
+^^I^^I^^I\fill [yellow!40!white, draw=black] (0, 0) rectangle (3, 2);
+^^I^^I^^I\fill[draw=\ldraw, fill opacity=0.5, red!70!white] (1.6,0.9) ellipse (34pt and 22pt);
+^^I^^I^^I\draw (0, 0.45) to [bend right=20] (1.5, 1);
+^^I^^I^^I\draw (1.5, 1) to [bend right=20] (1.9, 2);
+^^I^^I^^I\draw (1.5, 1) -- (2.2, 0);
+^^I^^I^^I\node at (1, 1.1) {$\Blue{A_{1}} \cap \Red{B}$};
+^^I^^I^^I\node at (2.05, 1.35) {$\Red{B}$};
+^^I^^I^^I\node at (1.3, 0.4) {$\Blue{A_{2}} \cap \Red{B}$};
+^^I^^I^^I\node at (2.2, 0.8) {$\Blue{A_{3}} \cap \Red{B}$};
+^^I^^I^^I\node at (0.3, 1.75) {$\Blue{A_1}$};
+^^I^^I^^I\node at (0.4, 0.2) {$\Blue{A_2}$};
+^^I^^I^^I\node at (2.6, 1.70) {$\Blue{A_3}$};
+^^I^^I\end{scope}
+^^I\end{tikzpicture}
+\end{minipage}%
+\begin{minipage}{0.66\linewidth}
+^^I\begin{flalign*}
+^^I^^IP(B) &= P(B \cap A_{1}) + P(B \cap A_{2}) + P(B \cap A_{3}) &\\
+^^I^^I^^I &= P(A_1)P(B|A_1) + ... + P(A_3)P(B|A_3)
+^^I\end{flalign*}
+
+^^IBy induction, for a \textit{2-level probability scenario}, it can be proven that: \vspace{0.75mm}
+
+^^I{\centering \boxed{P(B) = \sum_{i=1}P(A_i)P(B|A_i)}\\}
+\end{minipage}%
+^^E^^L 

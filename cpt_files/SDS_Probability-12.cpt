@@ -1,0 +1,12 @@
+\subsubsection{Conditional Probability}\topline
+Let $P(B)>0$, then the probability of $A$ given that $B$ has occurred is:
+\bcentering{P(A|B) = \frac{P(A \cap B)}{P(B)}}
+Conditional probabilities share properties of ordinary probabilities:\\
+$P(A | B) \geq 0$, assuming $P(B)>0$ \\
+$P(\Omega | B) = \frac{P(\Omega \cap B)}{P(B)}=\frac{P(B)}{P(B)}=1 \;\rightarrow\; P(B|B)$ has the same result. \\
+If $A \cap C = \emptyset \then P(A\cup C | B) = P(A|B) + P(C|B)$, because
+$P(A\cup C | B) = \frac{P[(A \cup C) \cap B]}{P(B)}=\frac{P[(A\cap B)\cup P(C \cap B)]}{P(B)} = \frac{P(A\cap B)+P(C\cap B)}{P(B)}$,
+and by induction this can be proven true for finitely many disjoint events (\textbf{Finte Additivity}) and countably many disjoint events (\textbf{Countable Additivity}).\\
+\vspace{1.5mm}
+Any fact we derive for ordinary probability will remain true for conditional probability as well.
+^^E^^L 

@@ -1,0 +1,59 @@
+\subsubsection{More Consequences of the Axioms}\topline
+Consider the condition $P(A \cap B) \geq 0, \then$ The events could be joint, therefore, more generally:\\
+\vspace{1.5mm}
+{\centering
+^^I\begin{minipage}{1.75cm}
+^^I^^I\begin{tikzpicture}
+^^I^^I^^I\fill[draw=\ldraw, fill opacity=0.5, red!90!white] (0:0pt) circle (8pt);
+^^I^^I^^I\fill[draw=\ldraw, fill opacity=0.5, blue!90!white] (0:10pt) circle (8pt);
+^^I^^I\end{tikzpicture}
+^^I\end{minipage}%
+^^I\begin{minipage}{4cm}
+^^I^^I\boxed{P(A \cup B) = P(A) + P(B) - P(A \cap B)}
+^^I\end{minipage}
+\\}
+\vspace{1.5mm}
+Which can be generalized to the \nameref{Inclusion-Exclusion Principle}:
+\bcentering{P\left( \bigcup_{i=1}^{n} A_i\right) = -\sum_{k=1}^{n} (-1)^k \sum_{1 \leq i_{_1} < ... < i_{_k} \leq n} P \left( \, \bigcap_{j=1}^{k} A_{i_j} \right)}
+From the above, the \textit{Union Bound} property follows: \boxed{P(A \cup B) \leq P(A) + P(B)}\\
+\vspace{1.5mm}
+Consider that $A$ is included in $B$, then:\\
+\vspace{1.5mm}
+{\centering
+^^I\begin{minipage}{1.75cm}
+^^I^^I\begin{tikzpicture}
+^^I^^I^^I\begin{axis}[hide axis, xmin=0, xmax=1, ymin=0, ymax=1, clip=false, width=2.8cm,height=2.3cm,]
+^^I^^I^^I^^I\fill[draw=\ldraw, fill opacity=0.5, red!90!white] (0.5,0.5) ellipse (14pt and 8pt);
+^^I^^I^^I^^I\fill[draw=\ldraw, fill opacity=0.5, blue!90!white] (0.4, 0.5) circle (4.5pt);
+^^I^^I^^I^^I\draw[line width=0.05mm] (axis cs:0,0) rectangle (axis cs:1,1);
+^^I^^I^^I\end{axis}
+^^I^^I\end{tikzpicture}
+^^I\end{minipage}%
+^^I\begin{minipage}{3cm}
+^^I^^I\boxed{A \subset B \then P(A) \leq P(B)}
+^^I\end{minipage}
+\\}
+\vspace{1.5mm}
+since $B = A \cup (B \cap A^{c}) \then P(B) = P(A) + P(B \cap A^{c}) \geq P(A) \qed$ \\
+\vspace{1.5mm}
+
+Consider 3 sets not necessarily disjoint, e.g.:\\
+\vspace{1.5mm}
+\begin{minipage}{2cm}
+^^I\centering
+^^I\begin{tikzpicture}
+^^I^^I\fill[draw=none, fill opacity=1, green!60!white] (0:0pt) circle (8pt);
+^^I^^I\fill[draw=none, fill opacity=1, blue!60!white] (60:10pt) circle (8pt);
+^^I^^I\fill[draw=none, fill opacity=1, red!60!white] (120:10pt) circle (8pt);
+^^I^^I\draw [draw=black, line width=0.05mm] (0:0pt) circle (8pt);
+^^I^^I\draw [draw=black, line width=0.05mm] (60:10pt) circle (8pt);
+^^I^^I\draw [draw=black, line width=0.05mm] (120:10pt) circle (8pt);
+^^I\end{tikzpicture}
+\end{minipage}%
+\begin{minipage}{3cm}
+^^I\boxed{P(A \cup B \cup C) =  \textcolor{red}{P(A)} + \textcolor{blue}{P(A^{c} \cap B)} + \textcolor{green!70!black}{P(A^{c} \cap B^{c} \cap C)}}
+\end{minipage}
+\\
+\vspace{1.5mm}
+Visually, we can check the boxed expression by the matching of the colors, and since the subsets are disjoint, additivity holds.  Notice the expression also applies to disjoint sets $\qed$
+^^E^^L 

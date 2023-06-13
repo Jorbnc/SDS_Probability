@@ -1,0 +1,53 @@
+\subsubsection{When Conditional Probability = Unconditional Probability}\topline
+Consider 3 tosses of a biased coin: $P(H)=p, P(T)=1-p$ \\ \vspace{1mm}
+\begin{minipage}{0.50\linewidth}
+^^I\centering
+^^I\begin{tikzpicture}[scale=0.40, grow=right,
+^^I^^I^^I^^I^^Ilevel 1/.style={sibling distance=-4cm, level distance=2.5cm},
+^^I^^I^^I^^I^^Ilevel 2/.style={sibling distance=-2cm},
+^^I^^I^^I^^I^^Ilevel 3/.style={sibling distance=-0.9cm},
+^^I^^I^^I^^I^^Iprobability/.style={above, midway},
+^^I^^I^^I^^I^^Ievent/.style={circle, draw, fill=gray!10, minimum size=0.08cm}]
+^^I^^I\node[event] {}
+^^I^^Ichild { node[event] {}
+^^I^^I^^Ichild { node[event] {}
+^^I^^I^^I^^Ichild { node[event, label=right:{$HHH$}] {} edge from parent node[above, pos=0.5] {$p$} }
+^^I^^I^^I^^Ichild { node[event, label=right:{$HHT$}] {} edge from parent node[below, pos=0.5] {$1-p$} }
+^^I^^I^^I^^Iedge from parent node[above, pos=0.5] {$p$}
+^^I^^I^^I}
+^^I^^I^^Ichild { node[event] {}
+^^I^^I^^I^^Ichild {node[event, label=right:{$HTH$}] {} edge from parent node[above, pos=0.5] {$p$} }
+^^I^^I^^I^^Ichild {node[event, label=right:{$HTT$}] {} edge from parent node[below, pos=0.5] {$1-p$} }
+^^I^^I^^I^^Iedge from parent node[below, pos=0.5, xshift=-1pt] {$1-p$}
+^^I^^I^^I}
+^^I^^I^^Iedge from parent node[above, pos=0.5] {$p$}
+^^I^^I}
+^^I^^Ichild { node[event] {}
+^^I^^I^^Ichild {  node[event] {}
+^^I^^I^^I^^Ichild { node[event, label=right:{$THH$}] {} edge from parent node[above, pos=0.5] {$p$} }
+^^I^^I^^I^^Ichild { node[event, label=right:{$THT$}] {} edge from parent node[below, pos=0.5] {$1-p$} }
+^^I^^I^^I^^Iedge from parent node[above, pos=0.5] {$p$}
+^^I^^I^^I}
+^^I^^I^^Ichild { node[event] {}
+^^I^^I^^I^^Ichild {node[event, label=right:{$TTH$}] {} edge from parent node[above, pos=0.5] {$p$} }
+^^I^^I^^I^^Ichild {node[event, label=right:{$TTT$}] {} edge from parent node[below, pos=0.5] {$1-p$} }
+^^I^^I^^I^^Iedge from parent node[below, pos=0.5, xshift=-1pt] {$1-p$}
+^^I^^I^^I}
+^^I^^I^^Iedge from parent
+^^I^^I^^Inode[below, pos=0.5, yshift=-2.5pt, xshift=-1.5pt] {$1-p$}
+^^I^^I};
+^^I\end{tikzpicture}
+\end{minipage}%
+\begin{minipage}{0.50\linewidth}
+^^INotice that the unconditional and conditional probabilities for $H_2$ (heads in the second toss) are the same:
+^^I\begin{align*}
+^^I^^I\shortintertext{Conditional Probability (from the diagram)}
+^^I^^I^^IP(H_{2}|H_{1}) = & \; P(H_{2}|T_{1}) = p \\
+^^I^^I\shortintertext{Unconditional Probability (using Total Probability)}
+^^I^^I^^IP(H_2) = & \; P(H_1)P(H_2|H_1) + \\
+^^I^^I^^I^^I^^I & \; P(T_1)P(H_2 | T_1) \\
+^^I^^I^^I^^I   = & \; (p)(p) + (1-p)(p) \\
+^^I^^I^^I^^I   = & \; p
+^^I\end{align*}
+\end{minipage}%
+^^E^^L 

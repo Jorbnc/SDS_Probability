@@ -1,0 +1,40 @@
+\subsubsection{Multiplication \& Total Probability Rules: Tree Interpretation}\topline
+Consider the following 3-level probability tree (scenario): $A_1, A_2$ are disjoint, $B_1, B_2$ are disjoint, $C_1, C_2$ are disjoint,
+then $B_1$'s total probability is calculated using both rules: \\\vspace{1mm}
+\centering
+\begin{tikzpicture}[scale=0.40, grow=right,
+^^I^^I^^I^^Ilevel 1/.style={sibling distance=-4cm, level distance=3cm},
+^^I^^I^^I^^Ilevel 2/.style={sibling distance=-2cm},
+^^I^^I^^I^^Ilevel 3/.style={sibling distance=-0.9cm},
+^^I^^I^^I^^Iprobability/.style={above, midway},
+^^I^^I^^I^^Ievent/.style={circle, draw, fill=gray!10, minimum size=0.08cm}]
+^^I\node[event] {}
+^^Ichild { [draw=red, thick] node[event] {}
+^^I^^Ichild { node[event] {}
+^^I^^I^^Ichild { node[event, label=right:{$A_1 \cap \boldsymbol{\Red{B_1}} \cap C_1$}] {} edge from parent node[above, pos=0.5] {} }
+^^I^^I^^Ichild { node[event, label=right:{$A_1 \cap \boldsymbol{\Red{B_1}} \cap C_2$}] {} edge from parent node[above, pos=0.5] {} }
+^^I^^I^^Iedge from parent node[above, pos=0.5] {}
+^^I^^I}
+^^I^^Ichild { [draw=black, thin] node[event] {}
+^^I^^I^^Ichild {node[event, label=right:{$A_1 \cap B_2 \cap C_1$}] {} edge from parent node[above, pos=0.5] {} }
+^^I^^I^^Ichild {node[event, label=right:{$A_1 \cap B_2 \cap C_2$}] {} edge from parent node[above, pos=0.5] {} }
+^^I^^I^^Iedge from parent node[below, pos=0.5] {}
+^^I^^I}
+^^I^^Iedge from parent node[] {}
+^^I}
+^^Ichild { [draw=red, thick] node[event] {}
+^^I^^Ichild {  node[event] {}
+^^I^^I^^Ichild { node[event, label=right:{$A_2 \cap \boldsymbol{\Red{B_1}} \cap C_1$}] {} edge from parent node[above, pos=0.5] {} }
+^^I^^I^^Ichild { node[event, label=right:{$A_2 \cap \boldsymbol{\Red{B_1}} \cap C_2$}] {} edge from parent node[above, pos=0.5] {} }
+^^I^^I^^Iedge from parent node[above, pos=0.5] {}
+^^I^^I}
+^^I^^Ichild { [draw=black, thin] node[event] {}
+^^I^^I^^Ichild {node[event, label=right:{$A_2 \cap B_2 \cap C_1$}] {} edge from parent node[above, pos=0.5] {} }
+^^I^^I^^Ichild {node[event, label=right:{$A_2 \cap B_2 \cap C_2$}] {} edge from parent node[above, pos=0.5] {} }
+^^I^^I^^Iedge from parent node[above, pos=0.5] {}
+^^I^^I}
+^^I^^Iedge from parent
+^^I^^Inode[] {}
+^^I};
+\end{tikzpicture}
+^^E^^L 

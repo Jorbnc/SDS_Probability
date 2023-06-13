@@ -1,0 +1,8 @@
+\subsubsection{Probability Axioms}\topline
+Nonnegativity: $P(A) \geq 0$, $A$ is any event. \\
+Normalization: $P(\Omega) = 1 $ (the event here is $\Omega$, since every set is subset of itself).\\
+(Finite) Additivity (\textit{to be strengthened later}): $A \cap B = \emptyset \implies P(A \cup B) = P(A) + P(B)$\\
+\vspace{2mm}
+The last axiom is going to be refined later\\
+These 3 axioms are sufficient to have a legitimate \textbf{probability model}.
+^^E^^L 

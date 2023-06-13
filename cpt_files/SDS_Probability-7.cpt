@@ -1,0 +1,18 @@
+\subsubsection{Consequences of the Axioms}\topline
+By set theory definitions we have: \boxed{A \cup A^{c} = \Omega} \, and \,  \boxed{A \cap A^{c} = \emptyset}
+\bcentering{P(A) \leq 1}
+$A$ and $A^{c}$ are disjoint $\then P(A \cup A^{c}) = 1 = P(A) + P(A^{c}) \then P(A^{c}) = 1 - P(A)$,
+and by \textit{nonnegativity} we get $P(A^{c}) \geq 0 \then P(A) \leq 1 \qed$
+\bcentering{P(\emptyset) = 0}
+Let $A = \Omega \then P(\Omega) + P(\Omega^{c}) = 1 \then 1 + \emptyset = 1  \then P(\emptyset) = 0 \qed$\\
+\vspace{1.5mm}
+Let $\Omega$ be a finite set and $A_{1},...,A_{n}$ be disjoint events, then:
+\bcentering{P\left(\bigcup_{i=1}^{n}A_{i} \right) = \sum_{1}^{n} P(A_{i})}
+$P(A \cup B \cup C)=P\left[(A \cup B) \cup C\right]$. From additivity, given that the events are disjoint, we have $(P(A) + P(B)) + P(C)$.
+By induction we can extend this to $n$ disjoint sets $\qed$\\
+\vspace{2mm}
+Let $\{\omega_{1},...,\omega_{k}\}$ be a discrete, finite set of sample points, then:
+\bcentering{P\big(\{\omega_{1},...,\omega_{k}\}\big) \then P\left(\,\bigcup_{j=1}^{k}\{\omega_{j}\} \right) \then \sum_{j=1}^{k}P\big(\{\omega_{j}\}\big)}
+because $\{\omega_{1},\dots,\omega_{k}\}$, can be seen as the union of \textit{unit sets}, and since they are disjoint, additivity applies $\!\qed$.
+Although, a simpler, non rigorous notation can be used: $\sum_{j=1}^{k}P(\omega_{j})$.
+^^E^^L 

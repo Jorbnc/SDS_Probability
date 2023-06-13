@@ -1,0 +1,23 @@
+\subsubsection{Independence of a collection of events}\topline
+{\centering\fbox{%
+\begin{minipage}{0.95\linewidth}
+Events $A_1, A_2,..., A_n$ are called independent if:\\ \vspace{-0.5mm}
+\begin{equation*}
+    P\left(\bigcap_{i\in S}A_i \right) = \prod_{i \in S} P(A_i), \quad \text{for every subset } S \; \text{of } \{1,2,...,n\}
+\end{equation*}
+\end{minipage}}\\}%
+\vspace{1.5mm}
+For instance, let $n=3$: \\\vspace{1mm}
+\[
+^^I\begin{rcases*}
+^^IP(A_1 \cap A_2)=P(A_1)P(A_2) \\
+^^IP(A_1 \cap A_3)=P(A_1)P(A_3) \\
+^^IP(A_2 \cap A_3)=P(A_2)P(A_3) \\
+^^I\end{rcases*} \text{Pairwise Independence}
+\]
+But we'll also need:\\
+{\centering
+^^I$P(A_1 \cap A_2 \cap A_3)=P(A_1)P(A_2)P(A_3)$
+\\}\vspace{1mm}
+Since it doesn't follow from the Pairwise Independence condition.
+^^E^^L 

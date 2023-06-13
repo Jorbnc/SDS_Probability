@@ -1,0 +1,14 @@
+\subsubsection{Multiplication Rule}\topline
+\vspace{-1mm}
+\begin{align*}
+^^I\shortintertext{Notice that:}
+^^I^^IP(A \cap B) &= P(B) P(A|B) \\
+^^I^^I^^I^^I^^I&= P(A) P(B|A) \\
+^^I\shortintertext{And for 3 events we have:}
+^^I^^IP[(A \cap B) \cap C] &= P(A \cap B) P(C|A \cap B) \\
+^^I^^I^^I^^I^^I^^I   &= P(A) P(B|A) P(C|A \cap B)\\
+^^I\shortintertext{More generally:}
+^^I^^I\Aboxed{P\left(\bigcap_{i=1}^{n} A_{i}\right) &= P(A_{1})\prod_{i=2}^{n}P\left(A_{i} \Bigg| \bigcap_{j=1}^{i-1} A_{j} \right)}
+\end{align*}\\
+A particular intersection of events would be represented as a full path in a probability tree.
+^^E^^L 
