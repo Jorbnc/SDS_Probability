@@ -251,6 +251,8 @@
 }
 \newcommand{\bcentering}[1]{\par\vspace{1.5mm}{\centering \boxed{#1}\par}\vspace{1.5mm}}
 \newcommand{\then}{\textcolor{blue}{\enspace\Rightarrow\enspace}}
+\newcommand{\AND}{\textcolor{blue!70!black}{\;\,\land\;\,}}
+\newcommand{\OR}{\textcolor{blue!70!black}{\;\,\lor\;\,}}
 \newcommand{\ldraw}{black}
 \newcommand{\Blue}[1]{\textcolor{blue}{#1}}
 \newcommand{\Red}[1]{\textcolor{red}{#1}}
@@ -745,9 +747,9 @@ e.g. $P(B|A)=0.99$. Find the probability that there's an airplane flying above, 
 	\item We have an initial model or beliefs for $A_{i}$.
 	\item We know how likely it is a particular event $B$ under each scenario, i.e. $P(B|A_{i})$.\\ \vspace{0.5mm}
 			$\Blue{A_{i}} \xrightarrow[P(\Red{B}|\Blue{A_{i}})]{\text{model}} \Red{B}$ \vspace{0.5mm}
-	\item Given that $B$ occured, we can update our model: Analyze possible causes or most likely scenarios for $B$. \\ \vspace{0.5mm}
+	\item Given that $B$ occurred, we can update our model: Analyze possible causes or most likely scenarios for $B$. \\ \vspace{0.5mm}
 			$\Red{B} \xrightarrow[P(\Blue{A_{i}}|\Red{B})]{\text{inference}} \Blue{A_i}$ \vspace{0.5mm}
-	\item In other words, we use inference to analyze how likely is a scenario $A_{i}$, given that $B$ occured.
+	\item In other words, we use inference to analyze how likely is a scenario $A_{i}$, given that $B$ occurred.
 \end{itemize}
 \vspace{0.5mm}
 \begin{minipage}{0.34\linewidth}
@@ -846,6 +848,32 @@ Two events are independent if:\\ \vspace{-0.5mm}
 \end{minipage}}\\}%
 \vspace{1.5mm}
 This definition symmetrically implies both $P(B|A)=P(B)$ and $P(A|B)=P(A)$ and works even when $P(A)=0$.\\
+}
+
+\sectionbox{\subsubsection{Why $P(A \cap B)=P(A)P(B) \iff$ Independence}\topline
+So far we know the following: \vspace{-1mm}
+\begin{align*}
+	\text{Independent}(A,B) &\then P(A\cap B)=P(A|B)P(B)=P(A)P(B) \\
+	\text{Dependent}(A,B) &\then P(A\cap B)=P(A|B)P(B) \neq P(A)P(B)
+\end{align*} \vspace{-1mm}
+If by pure coincidence we have \vspace{-1mm}
+\begin{align*}
+	\text{Dependent}(A,B) \AND P(A\cap B)=P(A)P(B)
+\end{align*} \vspace{-1mm}
+Then that would imply both: \vspace{-1mm}
+\begin{align*}
+	P(A|B)P(B)&=P(A)P(B) \\
+	P(A|B)P(B)&\neq P(A)P(B) \quad \text{(a contradiction)}
+\end{align*} \vspace{-3.5mm}
+}
+
+\sectionbox{\subsubsection{Independence of "Essentially Deterministic" Events}\topline
+{\centering\fbox{%
+\begin{minipage}{0.9\linewidth}
+$P(A)=0 \OR P(A)=1 \then A$ is independent of any event and independent of itself.
+\end{minipage}}\\}%
+\vspace{1mm}
+Let $B$ be any event $\then P(A \cap B)=P(A)P(B)$ for both cases $P(A)=0 \AND P(A)=1 \qed $
 }
 
 \sectionbox{\subsubsection{Independence and Disjoint Sets}\topline
@@ -1028,7 +1056,7 @@ $P(H_{11}|H^{10}) = \frac{P(A)P(H^{10}\cap H_{11}|A) + P(B)P(H^{10} \cap H_{11}|
 $P(H_{11}|H^{10}) = \frac{(0.9^{11})(0.5)+(0.1^{11})(0.5)}{(0.9^{10})(0.5)+(0.1^{10})(0.5)} \approx \Blue{0.9} \then$ \Blue{Overall tosses aren't independent.}
 }
 
-\sectionbox{\subsubsection{Independence of a collection of events}\topline
+\sectionbox{\subsubsection{Collective/Mutual Independence}\topline
 {\centering\fbox{%
 \begin{minipage}{0.95\linewidth}
 Events $A_1, A_2,..., A_n$ are called independent if:\\ \vspace{-0.5mm}
@@ -1037,27 +1065,145 @@ Events $A_1, A_2,..., A_n$ are called independent if:\\ \vspace{-0.5mm}
 \end{equation*}
 \end{minipage}}\\}%
 \vspace{1.5mm}
-For instance, let $n=3$: \\\vspace{1mm}
-\[
-	\begin{rcases*}
-	P(A_1 \cap A_2)=P(A_1)P(A_2) \\
-	P(A_1 \cap A_3)=P(A_1)P(A_3) \\
-	P(A_2 \cap A_3)=P(A_2)P(A_3) \\
-	\end{rcases*} \text{Pairwise Independence}
-\]
-But we'll also need:\\
+For instance, let $n=3$, then we'll need the following Pairwise Independence conditions:\\ \vspace{1mm}
+$P(A_1 \cap A_2)=P(A_1)P(A_2)$\\
+$P(A_1 \cap A_3)=P(A_1)P(A_3)$\\
+$P(A_2 \cap A_3)=P(A_2)P(A_3)$\\\vspace{1mm}
+But we'll also need: $P(A_1 \cap A_2 \cap A_3)=P(A_1)P(A_2)P(A_3)$, since it doesn't follow from the Pairwise Independence condition. \\\vspace{1.5mm}
+Furthermore, if the boxed condition holds, then any relation such as: $P(A_{3})=P(A_{3}|A_{1} \cap A_{2}) = P(A_{3}|A_{1} \cap A_{2}^{c}) = P(A_{3}|A_{1}^{c} \cap A_{2})...$
+also holds.\\\vspace{1.5mm}
+\Red{For a \textbf{very detailed and long} sequence of proofs see:}
+\url{https://stats.libretexts.org/Bookshelves/Probability_Theory/Probability_Mathematical_Statistics_and_Stochastic_Processes_(Siegrist)/02%3A_Probability_Spaces/2.05%3A_Independence}\\
+\Red{and}\\
+\url{https://math.stackexchange.com/questions/1889772/understanding-the-definition-for-collections-of-events-being-independent}\\
+\Red{Add the proofs to the appendix!}
+}
+
+
+\examplebox{
+Let $A, B, C, D$ be independent events.\\
+a) Is it guaranteed that $A \cap C$ is independent from $B^{c} \cap D$?\\
+$A \cap C$ only gives information about $A$ and $C$, and nothing about $D$ or $B$ (and therefore $B^c$).\\\vspace{1mm}
+b) Is it guaranteed that $A \cap B^c \cap D$ is independent from $B^{c} \cap D^c$?\\
+If $A \cap B^c \cap D$ occurs $\then D$ occurs $\then D^c$ doesn't occur, and so it affects the probability of $B^{c} \cap D^c$.
+Also, consider that if $B^c \cap D \neq \emptyset \then$ It's a subset of $B^{c} \cup D^c$ and they have common elements, 
+but we're not considering the intersection with $A$ that could exclude it.
+}
+
+\examplebox{\subsubsection{Pairwise Independent, but not Collectively Independent}\topline
+Consider two independent fair coin tosses $\then$ Outcomes in \{HH, HT, TH, TT\} have the same probability.\\
+Let \{$H_{1}=$ First toss is $H$\}, \{$H_{2}=$ Seconds toss is $H\} \then P(H_1)=P(H_2)=1/2$\\
+Let $C:$ The two tosses have the same result.\\\vspace{1.5mm}
+
+There's pairwise independence between all pairs:\\
+$P(H_1 \cap C)=P(H_1 \cap H_2)=1/4 \AND P(H_{1})P(C)=(1/2)(1/2)=1/4$\\
+$P(H_2 \cap C)=P(H_2 \cap H_1)=1/4 \AND P(H_{2})P(C)=(1/2)(1/2)=1/4$\\\vspace{1.5mm}
+
+But there's no independence for the conjunction of all three events:\\
+$P(H_1 \cap H_2 \cap C) = P(H_1 \cap H_2) = (1/2)^{2}=1/4$\\
+$P(H_1)P(H_2)P(C)=(1/2)^{3}=1/8$\\\vspace{1.5mm}
+
+Intuitively, notice that for $P(C|H_1)$, the occurrence of $H_1$ doesn't give any new information, since the second toss could still be $T$ or $H$ with equal probability, 
+so $P(C|H_1)=(1/2)=P(C)$, but if we are asked for $P(C|H_1 \cap H_2)$ we can see that the answer is $1$.
+}
+
+\sectionbox{\subsubsection{Reliability: Serial Configuration}\topline
+Let $U_i$ be the event in which the \textit{ith} unit is up with probability $p_i$.\\
+\vspace{1.5mm}
 {\centering
-	$P(A_1 \cap A_2 \cap A_3)=P(A_1)P(A_2)P(A_3)$
-\\}\vspace{1mm}
-Since it doesn't follow from the Pairwise Independence condition.
+\begin{tikzpicture}[square/.style={draw, thin, black, minimum size=5mm}]
+	\node[square, label=center:$p_1$] (s1) at (0,0) {};
+	\node[square, label=center:$...$, right=of s1] (s2) {};
+	\node[square, label=center:$p_n$, right=of s2] (s3) {};
+	\draw[thin, -] ($(s1.west) - (1,0)$) -- (s1.west); % [thin, -] ----> "-" means there will be no arrowhead
+	\draw[thin, -] (s1) -- node[above] {} (s2);
+	\draw[thin, -] (s2) -- node[above] {} (s3);
+	\draw[thin, -] (s3.east) -- ($(s3.east) + (1,0)$);
+\end{tikzpicture}\\}
+\vspace{1mm}
+Events $U_i$ are independent, so the probability that the whole serial system is up becomes: 
+\bcentering{P\left(\bigcap U_i\right)=\prod p_i}
 }
 
-\sectionbox{\subsubsection{Independence vs. Pairwise Independence}\topline
-Foo
+\sectionbox{\subsubsection{Reliability: Parallel Configuration}\topline
+Notice that the system is up if any subset (of the set of all components) is up. Let $F_{i}$ be the event in which the \textit{ith} component fails (these events are also independent), then:
+\\\vspace{1.5mm}
+\begin{minipage}{0.4\linewidth}
+	\centering
+	\begin{tikzpicture}[square/.style={draw, thin, black, minimum size=5mm}]
+		\node[square, label=center:$p_1$] (s1) at (0,0) {};
+		\node[square, label=center:$...$, below=3mm of s1] (s2) {};
+		\node[square, label=center:$p_n$, below=3mm of s2] (s3) {};
+		\draw[thin, -] ($(s1.west) - (0.60,0)$) -- (s1.west); % [thin, -] ----> "-" means there will be no arrowhead
+		\draw[thin, -] ($(s1.west) - (0.60,0)$) -- ($(s2.west) - (0.60,0)$);
+		\draw[thin, -] ($(s2.west) - (1.2,0)$) -- (s2.west);
+		\draw[thin, -] ($(s2.west) - (0.60,0)$) -- ($(s3.west) - (0.60,0)$);
+		\draw[thin, -] ($(s3.west) - (0.60,0)$) -- (s3.west);
+		\draw[thin, -] (s1) -- node[above] {} (s2);
+		\draw[thin, -] (s2) -- node[above] {} (s3);
+		\draw[thin, -] (s1.east) -- ($(s1.east) + (0.60,0)$);
+		\draw[thin, -] ($(s1.east) + (0.60,0)$) -- ($(s2.east) + (0.60,0)$);
+		\draw[thin, -] (s2.east) -- ($(s2.east) + (1.2,0)$);
+		\draw[thin, -] ($(s2.east) + (0.60,0)$) -- ($(s3.east) + (0.60,0)$);
+		\draw[thin, -] (s3.east) -- ($(s3.east) + (0.60,0)$);
+	\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.55\linewidth}
+	The probability that the whole system is up becomes $P\left(\bigcup U_i\right)$, which can be seen as the complementary probability that all components fail together:
+	\vspace{0.5mm}\\
+	$1 - P\left(\bigcap F_i\right) = 1 - \prod P(F_i)$
+	\bcentering{1-\prod(1-p_i) }
+\end{minipage}
 }
 
-\sectionbox{\subsubsection{Reliability}\topline
-Foo
+\examplebox{\subsubsection{Reliability: Complex Configuration}\topline
+Assume each component has a probability $p$ of \textit{being up}.\\
+\vspace{1mm}
+{\centering
+\begin{tikzpicture}[-,auto,node distance=10mm]
+	\tikzstyle{point}=[coordinate]
+	\tikzstyle{block}=[draw, rectangle, minimum height=3mm, minimum width=6mm]
+	% Points and Blocks
+	\node[point] (p0)                     		{};
+	\node[block] (A)	[right = 3mm of p0]		{A};
+	\node[point] (p1)	[right = 4mm of A]		{};
+	\node[point] (p2)   [right = 4mm of p1]		{};
+	\node[block] (B2)	[right = 4mm of p2]		{B2};
+	\node[block] (B1)	[above = 1.5mm of B2]	{B1};
+	\node[block] (B3)	[below = 1.5mm of B2]	{B3};
+	\node[point] (p3)   [right = 4mm of B2]		{};
+	\node[block] (B4)	[right = 4mm of p3]		{B4};
+	\node[block] (B5)	[below = 8mm of p3]		{B5};
+	\node[point] (p4)   [right = 4mm of B4]		{};
+	\node[point] (p5)   [right = 4mm of p4]		{};
+	\node[point] (p6)   [right = 6mm of p5]		{};
+	\node[point] (p7)   [right = 6mm of p6]		{};
+	\node[point] (p8)   [right = 4mm of p7]		{};
+	\node[block] (C1)	[above = 2mm of p6]		{C1};
+	\node[block] (C2)	[below = 2mm of p6]		{C2};
+	% Straight Lines
+	\draw [thin] (p0) -- (A) (A) -- (p1) (p1) -- (p2) (p2) -- (B2) (B2) -- (p3) (p3) -- (B4) (B4) -- (p4) (p4) -- (p5) (p7) -- (p8);
+	% Other lines
+	\draw [thin] (p2) |- (B1) (p2) |- (B3) (p3) |- (B1) (p3) |- (B3) (p1) |- (B5) (B5) -| (p4) (p5) |- (C1) (p5) |- (C2) (C1) -| (p7) (C2) -| (p7); 
+
+	% \draw [thin]   (7) -|  (1)   (2) -|  (1)   (0) --  (1)   (2) --  (3);
+	% \draw [thin]   (4) --  (5)   (7) --  (8)   (9) -- (10)  (11) --  (6);
+	% \draw [thin]  (10) -|  (6)   (6) -- (11)   (5) -|  (6);
+	% \draw [thin]   (3) -- node  [name=sm1]{} (4);
+	% \draw [thin]   (4) -- node  [name=sa1]{} (5);
+	% \draw [thin]   (8) -- node  [name=sm2]{} (9);
+	% \draw [thin]   (9) -- node  [name=sa2]{} (10);
+	% \draw [thin] (sm1) -- (sm2) (sa1)--(sa2);
+\end{tikzpicture}\\}
+\vspace{1.5mm}
+The system can be seen as a serial configuration of 3 major groups: $A$, $B$, and $C$. $A$ has probability $p$ of being up, $C$ has probability $1-(1-p)^2$ of being up.
+Now, $B$ is a parallel configuration of 2 subgroups: \\
+\begin{itemize}
+	\item B1, B2, B3 with probability $1-(1-p)^3$ in a serial configuration with B4 with probability $p$,\\
+			which becomes $\Blue{[1-(1-p)^3]p}$
+	\item B5 with probability $\Red{p}$
+\end{itemize}
+And so, for the group B we have: $1 - (1-\Blue{[1-(1-p)^3p}])(1-\Red{p})$. Finally, this is multiplied by the probabilities of groups A and C.
 }
 
 \titlebox{\section{Counting}}
@@ -1379,10 +1525,16 @@ We have proven that the expression works for $n+1 \qed$
 \newpage
 
 \begin{multicols*}{2}
-\titlebox{\section{References:}} \vspace{1.75mm}\\
-\url{https://math.stackexchange.com/questions/2587979/generalized-formula-for-the-probability-of-the-union-of-n-events-occurring} \\
-\url{https://people.maths.bris.ac.uk/~mb13434/incl_excl_n.pdf} \\
-\url{https://math.stackexchange.com/questions/1832686/probability-are-disjoint-events-independent}\\
+\titlebox{\section{References:}} \vspace{1.75mm}
+\subsection{Books}
+2008 - Introduction to Probability (2nd ed.) - Dimitri P. Bertsekas \& John N. Tsitsiklis \\
+\url{https://stats.libretexts.org/Bookshelves/Probability_Theory/Probability_Mathematical_Statistics_and_Stochastic_Processes_(Siegrist)}
+\subsection{MIT OpenCourseWare}
+\url{https://www.youtube.com/playlist?list=PLUl4u3cNGP60A3XMwZ5sep719_nh95qOe}
+\subsection{Links}
+\url{https://math.stackexchange.com/questions/2587979/generalized-formula-for-the-probability-of-the-union-of-n-events-occurring}\\
+\url{https://people.maths.bris.ac.uk/~mb13434/incl_excl_n.pdf}\\
+\url{https://math.stackexchange.com/questions/1832686/probability-are-disjoint-events-independent}
 \end{multicols*}
 
 \end{document}

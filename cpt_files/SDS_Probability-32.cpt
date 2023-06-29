@@ -1,67 +1,26 @@
-\subsubsection{Quadratic Functions}\topline
-
-\[ f(x) = ax^2+bx+c \]
-
-\textbf{Profit: }
-
+\subsubsection{EOQ sawtooth plot}\topline
+The optimal policy becomes ordering $Q^*$ units of inventory every $T^*$ units of time.
 
 \begin{figure}[H]
-^^I\begin{minipage}{0.5\linewidth}\centering
-^^I^^I
-^^I^^I\begin{tikzpicture}
-^^I^^I^^I\begin{axis}[
-^^I^^I^^I^^I^^I^^I1Quad,width=3.5cm,height=3.25cm,
-^^I^^I^^I^^I^^I^^Ixmin = 50,
-^^I^^I^^I^^I^^I^^Iymin=-60000, ymax=120000, grid=both,
-^^I^^I^^I^^I^^I^^Iscaled y ticks = false, scaled x ticks = false,
-^^I^^I^^I^^I^^I^^Iy tick label style={/pgf/number format/.cd, fixed, fixed zerofill, int detect,1000 sep={,},precision=2},
-^^I^^I^^I^^I^^I^^Ix tick label style={/pgf/number format/.cd, fixed, fixed zerofill, int detect, 1000 sep={},precision=2},
-^^I^^I^^I^^I^^I^^Ixlabel = {price}, x label style={at={(axis description cs:0.5,-0.2)}, anchor=north},
-^^I^^I^^I^^I^^I^^Iylabel = {\$}, y label style={at={(axis description cs:-0.35,.5)},rotate=90,anchor=south}
-^^I^^I^^I^^I^^I^^I]
-^^I^^I^^I^^I\addplot[blue, line width=0.25mm, domain=116:208]{-80*x^2 + 26000*x - 2000000};
-^^I^^I^^I\end{axis}
+^^I\centering
+^^I\begin{tikzpicture}
+^^I^^I\tikzmath{\lastx = 5;}
+^^I^^I\begin{axis}[1Quad,width=9cm,height=3.25cm,ymin=0,ymax=1.3,xmin=0,xmax=\lastx + 0.25,
+^^I^^I^^I^^I^^Ixtick style={draw=none}, xtick={\lastx-0.5}, xticklabels={1 Year},
+^^I^^I^^I^^I^^Iytick={0.5,1}, yticklabels={,,}
+^^I^^I^^I^^I^^I]
+^^I^^I^^I% Sawtooth
+^^I^^I^^I\draw (0,0) foreach \x in {1,...,\lastx} {-- ++(0,1) -- ++(1,-1)} [blue, line width=0.2mm];
+^^I^^I^^I\draw (0,0.5) -- (\lastx,0.5) [darkblue, dashed, line width=0.02mm];
+^^I^^I^^I\draw [pen colour={annot},decorate,decoration={calligraphic brace,mirror,amplitude=5pt,raise=2pt},xshift=0pt,yshift=0pt]
+^^I^^I^^I(1,0) -- (2,0) node [annot,midway,yshift=-12.5pt, line width=5mm] {\tiny $T^*=\frac{Q^*}{D}$};
+^^I^^I^^I\draw (0,1) node[annot, left]{\tiny $Q^*$};
+^^I^^I^^I\draw (0,0.5) node[annot, left]{\tiny $\frac{Q^*}{2}$};
+^^I^^I^^I\draw (0.45,0.6) node[annot, above]{\tiny $D$};
+^^I^^I\end{axis}
 ^^I^^I\end{tikzpicture}
-^^I\end{minipage}
-^^I\begin{minipage}{0.5\linewidth}\centering
-^^I^^I\tiny{
-^^I^^I\begin{align*}
-^^I^^I^^I&V(p) = 20,000 - 80p \\
-^^I^^I^^I&R(p) = (20,000 - 80p)p \\
-^^I^^I^^I&C(p) = 500,000 + 75(20,000 - 80p) \\
-^^I^^I^^I&P(p) = R(p) - C(p)
-^^I^^I\end{align*}}
-^^I^^I\vfill
-^^I\end{minipage}
 \end{figure}
 
-
-\textbf{Parcel trucking}
-
-\begin{figure}[H]
-^^I\begin{minipage}{0.5\linewidth}\centering
-^^I^^I\begin{tikzpicture}
-^^I^^I^^I\begin{axis}[
-^^I^^I^^I^^I^^I^^I1Quad,width=3.5cm,height=3.25cm,
-^^I^^I^^I^^I^^I^^Iymin=-0, ymax=60, grid=both,
-^^I^^I^^I^^I^^I^^Iscaled y ticks = false, scaled x ticks = false,
-^^I^^I^^I^^I^^I^^Ixtick={250, 500, 750, 1000},
-^^I^^I^^I^^I^^I^^Iy tick label style={/pgf/number format/.cd, fixed, fixed zerofill, int detect,1000 sep={,},precision=2},
-^^I^^I^^I^^I^^I^^Ix tick label style={/pgf/number format/.cd, fixed, fixed zerofill, int detect, 1000 sep={},precision=2},
-^^I^^I^^I^^I^^I^^Ixlabel = {weight}, x label style={at={(axis description cs:0.5,-0.2)}, anchor=north},
-^^I^^I^^I^^I^^I^^Iylabel = {cost of order}, y label style={at={(axis description cs:-0.35,.5)},rotate=90,anchor=south}
-^^I^^I^^I^^I^^I^^I]
-^^I^^I^^I^^I\addplot[blue, line width=0.25mm, domain=0:1000]{33 + 0.067*x - 0.00005*x^2};
-^^I^^I^^I\end{axis}
-^^I^^I\end{tikzpicture}
-^^I\end{minipage}
-^^I\begin{minipage}{0.5\linewidth}\centering
-^^I^^I\tiny{
-^^I^^I\begin{align*}
-^^I^^I^^I&f(w) = 33 + 0.067w - 0.00005w^2
-^^I^^I\end{align*}}
-^^I^^I\vfill
-^^I\end{minipage}
-\end{figure}
+Notice that the total consumption of the last order may take place after the 1 year (unit time) period.
 
 ^^E^^L 

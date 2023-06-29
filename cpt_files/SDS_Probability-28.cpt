@@ -1,2 +1,17 @@
-\subsubsection{Discrete Uniform Probability Law}\topline
+\subsubsection{Reliability: Serial Configuration}\topline
+Let $U_i$ be the event in which the \textit{ith} unit is up with probability $p_i$.\\
+\vspace{1.5mm}
+{\centering
+\begin{tikzpicture}[square/.style={draw, thin, black, minimum size=5mm}]
+^^I\node[square, label=center:$p_1$] (s1) at (0,0) {};
+^^I\node[square, label=center:$...$, right=of s1] (s2) {};
+^^I\node[square, label=center:$p_n$, right=of s2] (s3) {};
+^^I\draw[thin, -] ($(s1.west) - (1,0)$) -- (s1.west); % [thin, -] ----> "-" means there will be no arrowhead
+^^I\draw[thin, -] (s1) -- node[above] {} (s2);
+^^I\draw[thin, -] (s2) -- node[above] {} (s3);
+^^I\draw[thin, -] (s3.east) -- ($(s3.east) + (1,0)$);
+\end{tikzpicture}\\}
+\vspace{1mm}
+Events $U_i$ are independent, so the probability that the whole serial system is up becomes:
+\bcentering{P\left(\bigcap U_i\right)=\prod p_i}
 ^^E^^L 

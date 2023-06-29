@@ -1,27 +1,14 @@
-\subsubsection{Conditional Independence does not imply Independence}\topline
-\begin{minipage}{0.25\linewidth}
-^^I\centering
-^^I\begin{tikzpicture}
-^^I^^I\begin{axis}[hide axis, xmin=0, xmax=1, ymin=0, ymax=1, clip=false, width=2.8cm,height=2.5cm,]
-^^I^^I^^I\fill[draw=\ldraw, fill opacity=0.5, green!60!black] (-0.05, -0.15) rectangle (1.05,0.90);
-^^I^^I^^I\fill[draw=\ldraw, fill opacity=0.5, red!90!white] (0.3, 0.45) circle (9pt);
-^^I^^I^^I\fill[draw=\ldraw, fill opacity=0.5, blue!90!white] (0.7, 0.45) circle (9pt);
-^^I^^I^^I\draw[line width=0.05mm] (axis cs:-0.25,-0.35) rectangle (axis cs:1.25,1.1);
-^^I^^I^^I\node at (0.25, 0.5) {$A$};
-^^I^^I^^I\node at (0.75, 0.5) {$B$};
-^^I^^I^^I\node at (0.5, 0) {$C$};
-^^I^^I\end{axis}
-^^I\end{tikzpicture}
-\end{minipage}%
-\begin{minipage}{0.74\linewidth}
-^^ILet $A,B$ be conditionally independent given $C$:\\
-^^I$P(A\cap B|C)=P(A|C)P(B|C)$ \\
-^^I$\then P(A\cap B|C^c)=P(A|C^c)P(B|C^c)$.\\
-^^IBy total probability we have:\\
-^^I$P(A)=P(C)P(A|C) + P(C^c)P(A|C^c)$ and \\
-^^I$P(B)=P(C)P(B|C) + P(C^c)P(B|C^c)$.
-\end{minipage} \vspace{1mm}\\
-The unconditional probability of $A \cap B = P(C)P(A\cap B|C) + P(C^c)P(A\cap B|C^c)$, \; so
-$P(A \cap B) = P(C)P(A|C)P(B|C) + P(C^c)P(A|C^c)P(B|C^c)$, \; therefore
-$P(A \cap B) = P(A)P(B)$ is not necessarily true $\qed$
+\subsubsection{Conditional Independence}\topline
+{\centering\fbox{%
+\begin{minipage}{0.7\linewidth}
+Given an event $C$, events $A$ and $B$ are conditionally independent if:\\ \vspace{-0.5mm}
+\begin{equation*}
+    P(A \cap B | C) = P(A|C)P(B|C)
+\end{equation*}
+\end{minipage}}\\}%
+\vspace{1.5mm}
+Now, notice that by the Bayes' Rule and Multiplication Rule: \\\vspace{1mm}
+$P(A\cap B|C) = \frac{P(A \cap B \cap C)}{P(B)}  = \frac{P(C)P(B|C)P(A|B \cap C)}{P(C)}= P(B|C)P(A|B\cap C)$ \\\vspace{1mm}
+So conditional independence also implies: \, \boxed{P(A|B \cap C) = P(A|C)} \\ \vspace{1mm}
+In words, this relation states that if $C$ is known to have occurred, the additional knowledge that $B$ also occurred does not change the probability of $A$.
 ^^E^^L 

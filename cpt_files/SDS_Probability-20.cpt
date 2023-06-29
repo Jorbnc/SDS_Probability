@@ -1,27 +1,8 @@
-\subsubsection{Independence of Complements}\topline
-Let $A$ and $B$ be independent, then:\\
-\vspace{-2mm}
-\begin{minipage}{0.23\linewidth}
-^^I\centering
-^^I\begin{tikzpicture}
-^^I^^I\begin{axis}[hide axis, xmin=0, xmax=1, ymin=0, ymax=1, clip=false, width=2.8cm,height=2.5cm,]
-^^I^^I^^I\fill[draw=\ldraw, fill opacity=0.5, blue!90!white] (0.7, 0.5) circle (8pt);
-^^I^^I^^I\fill[draw=\ldraw, fill opacity=0.5, red!90!white] (0.4, 0.5) circle (8pt);
-^^I^^I^^I\draw[line width=0.05mm] (axis cs:0,0) rectangle (axis cs:1.1,1);
-^^I^^I^^I\node at (0.32, 0.5) {$A$};
-^^I^^I^^I\node at (0.78, 0.5) {$B$};
-^^I^^I\end{axis}
-^^I\end{tikzpicture}
-\end{minipage}%
-\begin{minipage}{0.78\linewidth}
-^^I\begin{flalign*}
-^^I^^I^^IA &=  \textcolor{purple}{(A \cap B)} \cup \textcolor{red!90}{(A \cap B^c)}  && \\
-^^I^^I^^IP(A) &=  P(A \cap B) + P(A \cap B^c) \quad\quad \text{(since they're disjoint)} \\
-^^I^^I^^IP(A) &= P(A)P(B) + P(A \cap B^c) \\
-^^I^^I^^IP(A \cap B^c) &= P(A) - P(A)P(B) = P(A)(1 - P(B))
-^^I\end{flalign*}
-\end{minipage}%
-\bcentering{P\left(A \cap B^c\right) = P\big(A\big)P\left(B^c\right)}
-By the same logic: $A$ and $B$ independent $\then$ $A$ and $B^c$ independent $\then$ $B^c$ and $A$ independent $\then$ $B^c$ and $A^c$ independent $\then$ $A^c$ and $B^c$ independent.
-\bcentering{P\left(A^c \cap B^c\right) = P\left(A^c\right)P\left(B^c\right)}
+\subsubsection{Independence of "Essentially Deterministic" Events}\topline
+{\centering\fbox{%
+\begin{minipage}{0.9\linewidth}
+$P(A)=0 \OR P(A)=1 \then A$ is independent of any event and independent of itself.
+\end{minipage}}\\}%
+\vspace{1mm}
+Let $B$ be any event $\then P(A \cap B)=P(A)P(B)$ for both cases $P(A)=0 \AND P(A)=1 \qed $
 ^^E^^L 

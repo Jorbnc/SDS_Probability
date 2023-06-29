@@ -1,14 +1,28 @@
-\subsubsection{Conditional Independence}\topline
-{\centering\fbox{%
-\begin{minipage}{0.7\linewidth}
-Given an event $C$, events $A$ and $B$ are conditionally independent if:\\ \vspace{-0.5mm}
-\begin{equation*}
-    P(A \cap B | C) = P(A|C)P(B|C)
-\end{equation*}
-\end{minipage}}\\}%
+\subsubsection{Independence and Disjoint Sets}\topline
+\begin{itemize}
+^^I\item Let $A$ and $B$ be disjoint events $\then P(A \cap B)=0$.
+^^I\item Let $P(A), P(B) > 0 \then P(A)P(B)>0$
+^^I\item Therefore $P(A \cap B)=P(A)P(B)$ does not hold $\then$ Events are not independent.
+\end{itemize}
 \vspace{1.5mm}
-Now, notice that by the Bayes' Rule and Multiplication Rule: \\\vspace{1mm}
-$P(A\cap B|C) = \frac{P(A \cap B \cap C)}{P(B)}  = \frac{P(C)P(B|C)P(A|B \cap C)}{P(C)}= P(B|C)P(A|B\cap C)$ \\\vspace{1mm}
-So conditional independence also implies: \, \boxed{P(A|B \cap C) = P(A|C)} \\ \vspace{1mm}
-In words, this relation states that if $C$ is known to have occurred, the additional knowledge that $B$ also occurred does not change the probability of $A$.
+\begin{minipage}{0.25\linewidth}
+^^I\centering
+^^I\begin{tikzpicture}
+^^I^^I\begin{axis}[hide axis, xmin=0, xmax=1, ymin=0, ymax=1, clip=false, width=3.25cm,height=3.25cm,]
+^^I^^I^^I\fill[draw=\ldraw, fill opacity=0.5, red!90!white] (0.27, 0.5) ellipse (9pt and 14pt);
+^^I^^I^^I\fill[draw=\ldraw, fill opacity=0.5, blue!90!white] (0.73, 0.5) ellipse (9pt and 14pt);
+^^I^^I^^I\node at (0.25, 0.5) {$A$};
+^^I^^I^^I\node at (0.75, 0.5) {$B$};
+^^I^^I^^I\node at (0.1, 0.9) {$\Omega$};
+^^I^^I^^I\draw[line width=0.05mm] (axis cs:0,0) rectangle (axis cs:1,1);
+^^I^^I\end{axis}
+^^I\end{tikzpicture}
+\end{minipage}%
+\begin{minipage}{0.73\linewidth}
+^^IBeing independent is something completely different from being disjoint. Furthermore, for mutually exclusive, disjoint events with positive probabilities,
+^^Iif $A$ occurs $\then$ $B$ can't occur, so it gives us a lot of information. Therefore:
+^^I\bcentering{\textbf{Disjoint events are not independent}} \vspace{-2mm}
+^^I\bcentering{\textbf{Independence is a relation about information}}
+^^IIf one of the events is impossible $\then$ They are \textbf{trivially independent}.
+\end{minipage}
 ^^E^^L 

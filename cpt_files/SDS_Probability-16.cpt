@@ -4,9 +4,9 @@
 ^^I\item We have an initial model or beliefs for $A_{i}$.
 ^^I\item We know how likely it is a particular event $B$ under each scenario, i.e. $P(B|A_{i})$.\\ \vspace{0.5mm}
 ^^I^^I^^I$\Blue{A_{i}} \xrightarrow[P(\Red{B}|\Blue{A_{i}})]{\text{model}} \Red{B}$ \vspace{0.5mm}
-^^I\item Given that $B$ occured, we can update our model: Analyze possible causes or most likely scenarios for $B$. \\ \vspace{0.5mm}
+^^I\item Given that $B$ occurred, we can update our model: Analyze possible causes or most likely scenarios for $B$. \\ \vspace{0.5mm}
 ^^I^^I^^I$\Red{B} \xrightarrow[P(\Blue{A_{i}}|\Red{B})]{\text{inference}} \Blue{A_i}$ \vspace{0.5mm}
-^^I\item In other words, we use inference to analyze how likely is a scenario $A_{i}$, given that $B$ occured.
+^^I\item In other words, we use inference to analyze how likely is a scenario $A_{i}$, given that $B$ occurred.
 \end{itemize}
 \vspace{0.5mm}
 \begin{minipage}{0.34\linewidth}

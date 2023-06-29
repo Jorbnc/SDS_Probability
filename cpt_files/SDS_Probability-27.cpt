@@ -1,3 +1,22 @@
-\subsubsection{Reliability}\topline
-Foo
+\subsubsection{Collective/Mutual Independence}\topline
+{\centering\fbox{%
+\begin{minipage}{0.95\linewidth}
+Events $A_1, A_2,..., A_n$ are called independent if:\\ \vspace{-0.5mm}
+\begin{equation*}
+    P\left(\bigcap_{i\in S}A_i \right) = \prod_{i \in S} P(A_i), \quad \text{for every subset } S \; \text{of } \{1,2,...,n\}
+\end{equation*}
+\end{minipage}}\\}%
+\vspace{1.5mm}
+For instance, let $n=3$, then we'll need the following Pairwise Independence conditions:\\ \vspace{1mm}
+$P(A_1 \cap A_2)=P(A_1)P(A_2)$\\
+$P(A_1 \cap A_3)=P(A_1)P(A_3)$\\
+$P(A_2 \cap A_3)=P(A_2)P(A_3)$\\\vspace{1mm}
+But we'll also need: $P(A_1 \cap A_2 \cap A_3)=P(A_1)P(A_2)P(A_3)$, since it doesn't follow from the Pairwise Independence condition. \\\vspace{1.5mm}
+Furthermore, if the boxed condition holds, then any relation such as: $P(A_{3})=P(A_{3}|A_{1} \cap A_{2}) = P(A_{3}|A_{1} \cap A_{2}^{c}) = P(A_{3}|A_{1}^{c} \cap A_{2})...$
+also holds.\\\vspace{1.5mm}
+\Red{For a \textbf{very detailed and long} sequence of proofs see:}
+\url{https://stats.libretexts.org/Bookshelves/Probability_Theory/Probability_Mathematical_Statistics_and_Stochastic_Processes_(Siegrist)/02%3A_Probability_Spaces/2.05%3A_Independence}\\
+\Red{and}\\
+\url{https://math.stackexchange.com/questions/1889772/understanding-the-definition-for-collections-of-events-being-independent}\\
+\Red{Add the proofs to the appendix!}
 ^^E^^L 
