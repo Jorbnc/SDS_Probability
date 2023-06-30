@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.8.28) (preloaded format=xelatex 2022.9.25)  29 JUN 2023 13:38
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.8.28) (preloaded format=xelatex 2022.9.25)  29 JUN 2023 20:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2836,36 +2836,89 @@ Overfull \hbox (10.04999pt too wide) in paragraph at lines 1207--1208
 []| [][][] 
  []
 
-\openout5 = `./cpt_files/SDS_Probability-30.cpt'.
 
-(cpt_files/SDS_Probability-30.cpt)
-Overfull \hbox (1.63333pt too wide) in paragraph at lines 1209--1212
+Overfull \hbox (1.63333pt too wide) in paragraph at lines 1209--1210
 []  [][][]
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1209--1212
-| [][][] 
+Underfull \hbox (badness 10000) in paragraph at lines 1209--1210
+
  []
 
-[2]
+\openout5 = `./cpt_files/SDS_Probability-30.cpt'.
+
+(cpt_files/SDS_Probability-30.cpt)
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1214--1215
+[]| [][][] 
+ []
+
 \openout5 = `./cpt_files/SDS_Probability-31.cpt'.
 
- (cpt_files/SDS_Probability-31.cpt)
-Overfull \hbox (10.79999pt too wide) in paragraph at lines 1258--1259
+(cpt_files/SDS_Probability-31.cpt)
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1219--1220
+[]| [][][] 
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1238.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1238.
+
+
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1238--1239
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-32.cpt'.
 
 (cpt_files/SDS_Probability-32.cpt)
-Overfull \hbox (10.79999pt too wide) in paragraph at lines 1285--1286
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1242--1243
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-33.cpt'.
 
-(cpt_files/SDS_Probability-33.cpt
+(cpt_files/SDS_Probability-33.cpt)
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1245--1246
+[]| [][][] 
+ []
+
+\openout5 = `./cpt_files/SDS_Probability-34.cpt'.
+
+(cpt_files/SDS_Probability-34.cpt)
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1248--1249
+[]| [][][] 
+ []
+
+\openout5 = `./cpt_files/SDS_Probability-35.cpt'.
+
+(cpt_files/SDS_Probability-35.cpt)
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1251--1252
+[]| [][][] 
+ []
+
+[2]
+\openout5 = `./cpt_files/SDS_Probability-36.cpt'.
+
+ (cpt_files/SDS_Probability-36.cpt)
+Overfull \hbox (10.79999pt too wide) in paragraph at lines 1298--1299
+[]| [][][] 
+ []
+
+\openout5 = `./cpt_files/SDS_Probability-37.cpt'.
+
+(cpt_files/SDS_Probability-37.cpt)
+Overfull \hbox (10.79999pt too wide) in paragraph at lines 1325--1326
+[]| [][][] 
+ []
+
+\openout5 = `./cpt_files/SDS_Probability-38.cpt'.
+
+(cpt_files/SDS_Probability-38.cpt
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/RevxNeueDemo(0)/b/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2897,13 +2950,13 @@ Package microtype Info: Character `\textquestiondown ' is missing
 (microtype)             in font `\TU/RevxNeueDemo(0)/b/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
 )
-Overfull \hbox (10.79999pt too wide) in paragraph at lines 1325--1326
+Overfull \hbox (10.79999pt too wide) in paragraph at lines 1365--1366
 | [][][] 
  []
 
-\openout5 = `./cpt_files/SDS_Probability-34.cpt'.
+\openout5 = `./cpt_files/SDS_Probability-39.cpt'.
 
-(cpt_files/SDS_Probability-34.cpt
+(cpt_files/SDS_Probability-39.cpt
 Overfull \hbox (1.33334pt too wide) in paragraph at lines 9--36
 []$[]$ $[]$ 
  []
@@ -2914,32 +2967,32 @@ Overfull \hbox (1.33334pt too wide) in paragraph at lines 42--65
  []
 
 )
-Overfull \hbox (10.79999pt too wide) in paragraph at lines 1393--1394
+Overfull \hbox (10.79999pt too wide) in paragraph at lines 1433--1434
 []| [][][] 
  []
 
 [3]
-Overfull \hbox (2.13333pt too wide) in paragraph at lines 1401--1402
+Overfull \hbox (2.13333pt too wide) in paragraph at lines 1441--1442
 []  [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1401--1402
+Underfull \hbox (badness 10000) in paragraph at lines 1441--1442
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1458--1464
+Underfull \hbox (badness 10000) in paragraph at lines 1498--1504
 
  []
 
 [4]
-Overfull \hbox (2.13333pt too wide) in paragraph at lines 1528--1529
+Overfull \hbox (2.13333pt too wide) in paragraph at lines 1568--1569
 []  [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1530--1532
+Underfull \hbox (badness 10000) in paragraph at lines 1570--1572
 [][]$[][][][][] [] [] [] [][][][][] [] [][][][][][][][][][] [] [][][] [] [][][][][][][][][][][] [] [][][][][][][][][][][] [] [][][][][][] [] [][][][][][][][][][][] [] [][][][][][][][][][][][] [] [][][][][][][][][][] [] [][][] [] [][][][][][][][][][] [] [][][][][][][][][] []
  []
 
@@ -2951,12 +3004,12 @@ Package logreq Info: Writing requests to 'SDS_Probability.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 58887 strings out of 410536
- 1359080 string characters out of 2820497
+ 58914 strings out of 410536
+ 1359740 string characters out of 2820497
  2568600 words of memory out of 3000000
- 79141 multiletter control sequences out of 15000+600000
+ 79153 multiletter control sequences out of 15000+600000
  496722 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,19n,120p,10707b,3846s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on SDS_Probability.xdv (5 pages, 484944 bytes).
+Output written on SDS_Probability.xdv (5 pages, 496304 bytes).

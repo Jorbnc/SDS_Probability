@@ -1,2 +1,4 @@
 \subsubsection{Discrete Uniform Probability Law}\topline
+If $\Omega$ consists of $n$ equally likely elements $(P({\omega})=1/n)$ and $A$ consists of $k$ elements, then
+\bcentering{P(A)=\frac{k}{n}}
 ^^E^^L 
