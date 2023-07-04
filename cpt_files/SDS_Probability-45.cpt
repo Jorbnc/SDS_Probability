@@ -1,26 +1,41 @@
-\subsubsection{EOQ sawtooth plot}\topline
-The optimal policy becomes ordering $Q^*$ units of inventory every $T^*$ units of time.
+\subsubsection{EOQ formula derivation}\topline
+
+Since demand is deterministic, we can get rid of the Stockout Cost concept for now. So,
+
+\begin{align*}
+^^ITRC(Q) &= c_{t}\frac{D}{Q} + c_{e}\frac{Q}{2}
+\end{align*}
+
+From the first-order optimal condition (first derivative equals zero), we have
+
+\begin{align*}
+^^I0 &= \diff{}{Q}\left(\frac{c_{t}D}{Q}\right) + \diff{}{Q}\left(\frac{c_{e}Q}{2}\right) \\
+^^I0 &= -\frac{c_{t}D}{Q^2}+\frac{c_{e}}{2} \\
+^^I\Aboxed{Q^{*} &= \sqrt{\frac{2c_{t}D}{c_e}}}
+\end{align*}
+
+The $EOQ$ or $Q^*$ gives the minimum $TRC$ under deterministic conditions:
 
 \begin{figure}[H]
 ^^I\centering
 ^^I\begin{tikzpicture}
-^^I^^I\tikzmath{\lastx = 5;}
-^^I^^I\begin{axis}[1Quad,width=9cm,height=3.25cm,ymin=0,ymax=1.3,xmin=0,xmax=\lastx + 0.25,
-^^I^^I^^I^^I^^Ixtick style={draw=none}, xtick={\lastx-0.5}, xticklabels={1 Year},
-^^I^^I^^I^^I^^Iytick={0.5,1}, yticklabels={,,}
-^^I^^I^^I^^I^^I]
-^^I^^I^^I% Sawtooth
-^^I^^I^^I\draw (0,0) foreach \x in {1,...,\lastx} {-- ++(0,1) -- ++(1,-1)} [blue, line width=0.2mm];
-^^I^^I^^I\draw (0,0.5) -- (\lastx,0.5) [darkblue, dashed, line width=0.02mm];
-^^I^^I^^I\draw [pen colour={annot},decorate,decoration={calligraphic brace,mirror,amplitude=5pt,raise=2pt},xshift=0pt,yshift=0pt]
-^^I^^I^^I(1,0) -- (2,0) node [annot,midway,yshift=-12.5pt, line width=5mm] {\tiny $T^*=\frac{Q^*}{D}$};
-^^I^^I^^I\draw (0,1) node[annot, left]{\tiny $Q^*$};
-^^I^^I^^I\draw (0,0.5) node[annot, left]{\tiny $\frac{Q^*}{2}$};
-^^I^^I^^I\draw (0.45,0.6) node[annot, above]{\tiny $D$};
-^^I^^I\end{axis}
-^^I^^I\end{tikzpicture}
+^^I\tikzmath{\ce=5.5; \ct=400; \D=3000; \xmax=3000; \Qopt=660; \TRCopt=3633.18;}
+^^I\begin{axis}[1Quad, width=6cm, height=4cm, hide scale,
+^^I^^I^^I^^Iymin=0, ymax=10000, xmin=0, xmax=\xmax,
+^^I^^I^^I^^Ixtick={\Qopt}, xticklabels={$Q^*$},
+^^I^^I^^I^^Iytick={\TRCopt}, yticklabels={$TRC(Q^*)$},
+^^I^^I^^I^^Irestrict y to domain = 0:9500]
+^^I^^I% Functions
+^^I^^I\addplot[blue, line width=0.15mm, domain=0:\xmax]{\ct*(\D/x)};
+^^I^^I\addplot[red, line width=0.15mm, domain=0:\xmax]{\ce*(x/2)};
+^^I^^I\addplot[black, line width=0.25mm, domain=0:\xmax]{\ct*(\D/x) + \ce*(x/2)};
+^^I^^I% Nodes
+^^I^^I\node[circle,draw=black,fill=black!75,inner sep=0pt,minimum size=2pt] at (\Qopt,\TRCopt){};
+^^I^^I% Annotations
+^^I^^I\draw (\Qopt,\TRCopt)node[above, xshift=0.5mm]{\tiny Optimum};
+^^I^^I\draw (2500,250)node[blue, above]{\tiny Ordering/Setup Cost};
+^^I^^I\draw (2500,4500)node[red, above]{\tiny Holding Cost};
+^^I\end{axis}
+^^I\end{tikzpicture}
 \end{figure}
-
-Notice that the total consumption of the last order may take place after the 1 year (unit time) period.
-
 ^^E^^L 

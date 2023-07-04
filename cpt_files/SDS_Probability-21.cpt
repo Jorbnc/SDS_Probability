@@ -8,9 +8,9 @@
 \begin{minipage}{0.25\linewidth}
 ^^I\centering
 ^^I\begin{tikzpicture}
-^^I^^I\begin{axis}[hide axis, xmin=0, xmax=1, ymin=0, ymax=1, clip=false, width=3.25cm,height=3.25cm,]
-^^I^^I^^I\fill[draw=\ldraw, fill opacity=0.5, red!90!white] (0.27, 0.5) ellipse (9pt and 14pt);
-^^I^^I^^I\fill[draw=\ldraw, fill opacity=0.5, blue!90!white] (0.73, 0.5) ellipse (9pt and 14pt);
+^^I^^I\begin{axis}[hide axis, xmin=0, xmax=1, ymin=0, ymax=1, clip=false, width=3.25cm,height=2.75cm,]
+^^I^^I^^I\fill[draw=\ldraw, fill opacity=0.5, red!90!white] (0.27, 0.5) ellipse (9pt and 10pt);
+^^I^^I^^I\fill[draw=\ldraw, fill opacity=0.5, blue!90!white] (0.73, 0.5) ellipse (9pt and 10pt);
 ^^I^^I^^I\node at (0.25, 0.5) {$A$};
 ^^I^^I^^I\node at (0.75, 0.5) {$B$};
 ^^I^^I^^I\node at (0.1, 0.9) {$\Omega$};

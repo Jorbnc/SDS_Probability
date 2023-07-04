@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.8.28) (preloaded format=xelatex 2022.9.25)  3 JUL 2023 20:03
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.8.28) (preloaded format=xelatex 2022.9.25)  4 JUL 2023 18:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1288,10 +1288,10 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip106
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 194.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 194.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 194.
-Package hyperref Info: Option `colorlinks' set `true' on input line 194.
+Package hyperref Info: Option `breaklinks' set `true' on input line 193.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 193.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 193.
+Package hyperref Info: Option `colorlinks' set `true' on input line 193.
  (C:\MikTex\tex/latex/listings\listings.sty
 \lst@mode=\count511
 \lst@gtempboxa=\box133
@@ -1396,39 +1396,39 @@ Package csquotes Info: ... found 'babel' package.
  (SDS_Probability.aux)
 \openout1 = `SDS_Probability.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 282.
-LaTeX Font Info:    ... okay on input line 282.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 282.
-LaTeX Font Info:    ... okay on input line 282.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 282.
-LaTeX Font Info:    ... okay on input line 282.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 282.
-LaTeX Font Info:    ... okay on input line 282.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 282.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 282.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 284.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 284.
  (C:\MikTex\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 282.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 282.
-LaTeX Font Info:    ... okay on input line 282.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 282.
-LaTeX Font Info:    ... okay on input line 282.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 282.
-LaTeX Font Info:    ... okay on input line 282.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 282.
-LaTeX Font Info:    ... okay on input line 282.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 282.
-LaTeX Font Info:    ... okay on input line 282.
-Package scrbase Info: activating english \abstractname on input line 282.
-Package scrbase Info: activating english \partname on input line 282.
-Package scrbase Info: activating english \figurename on input line 282.
-Package scrbase Info: activating english \tablename on input line 282.
-Package scrbase Info: activating english \contentsname on input line 282.
-Package scrbase Info: activating english \listfigurename on input line 282.
-Package scrbase Info: activating english \listtablename on input line 282.
-Package scrbase Info: activating english \refname on input line 282.
-Package scrbase Info: activating english \indexname on input line 282.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+Package scrbase Info: activating english \abstractname on input line 284.
+Package scrbase Info: activating english \partname on input line 284.
+Package scrbase Info: activating english \figurename on input line 284.
+Package scrbase Info: activating english \tablename on input line 284.
+Package scrbase Info: activating english \contentsname on input line 284.
+Package scrbase Info: activating english \listfigurename on input line 284.
+Package scrbase Info: activating english \listtablename on input line 284.
+Package scrbase Info: activating english \refname on input line 284.
+Package scrbase Info: activating english \indexname on input line 284.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1469,11 +1469,11 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 282.
-Package microtype Info: Applying patch `item' on input line 282.
-Package microtype Info: Applying patch `toc' on input line 282.
-Package microtype Info: Applying patch `eqnum' on input line 282.
-Package microtype Info: Applying patch `footnote' on input line 282.
+LaTeX Info: Redefining \microtypecontext on input line 284.
+Package microtype Info: Applying patch `item' on input line 284.
+Package microtype Info: Applying patch `toc' on input line 284.
+Package microtype Info: Applying patch `eqnum' on input line 284.
+Package microtype Info: Applying patch `footnote' on input line 284.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -2173,7 +2173,7 @@ Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 ) (C:\MikTex\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 282.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 284.
 
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
 
@@ -2191,9 +2191,9 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'SDS_Probability.bbl' found.
  (SDS_Probability.bbl)
-Package biblatex Info: Reference section=0 on input line 282.
-Package biblatex Info: Reference segment=0 on input line 282.
-Package hyperref Info: Link coloring ON on input line 282.
+Package biblatex Info: Reference section=0 on input line 284.
+Package biblatex Info: Reference segment=0 on input line 284.
+Package hyperref Info: Link coloring ON on input line 284.
  (SDS_Probability.out) (SDS_Probability.out)
 \@outlinefile=\write6
 \openout6 = `SDS_Probability.out'.
@@ -2205,7 +2205,7 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 282.
+(scrartcl)           before \begin{document} on input line 284.
  (C:\MikTex\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  (C:\MikTex\tex/latex/bookmark\bkm-dvipdfm.def
@@ -2276,34 +2276,34 @@ Package microtype Info: Character `\textquestiondown ' is missing
  (C:\MikTex\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 287.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 289.
  (C:\MikTex\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 287.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 289.
  (C:\MikTex\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 287.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 289.
  (C:\MikTex\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 287.
+(Font)              <8> on input line 289.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 287.
+(Font)              <6> on input line 289.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 287.
+(Font)              <5> on input line 289.
  (C:\MikTex\tex/latex/microtype\mt-eur.cfg
 File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 287.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 289.
  (C:\MikTex\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\MikTex\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 287.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 289.
  (C:\MikTex\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\MikTex\tex/latex/microtype\mt-msb.cfg
@@ -2340,7 +2340,7 @@ Package microtype Info: Character `\textquestiondown ' is missing
 (microtype)             in font `\TU/RevxNeueDemo(0)/m/n/5'.
 (microtype)             Ignoring protrusion settings for this character.
 
-Overfull \hbox (8.0pt too wide) in paragraph at lines 287--288
+Overfull \hbox (8.0pt too wide) in paragraph at lines 289--290
 []$[]$ 
  []
 
@@ -2349,12 +2349,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (1.63333pt too wide) in paragraph at lines 289--290
+Overfull \hbox (1.63333pt too wide) in paragraph at lines 291--292
 []  [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
 
  []
 
@@ -2452,26 +2452,26 @@ Package microtype Info: Character `\textquestiondown ' is missing
 (microtype)             in font `\TU/RevxNeueDemo(0)/b/n/5'.
 (microtype)             Ignoring protrusion settings for this character.
 )
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 340--341
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 342--343
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 373--374
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 375--376
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-2.cpt'.
 
 (cpt_files/SDS_Probability-2.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 381--382
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 383--384
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-3.cpt'.
 
 (cpt_files/SDS_Probability-3.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 386--387
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 388--389
 []| [][][] 
  []
 
@@ -2509,38 +2509,38 @@ Package microtype Info: Character `\textquestiondown ' is missing
 (microtype)             in font `\TU/RevxNeueDemo(0)/m/it/5'.
 (microtype)             Ignoring protrusion settings for this character.
 )
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 395--396
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 397--398
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 420--421
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 422--423
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-5.cpt'.
 
 (cpt_files/SDS_Probability-5.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 433--434
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 435--436
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-6.cpt'.
 
 (cpt_files/SDS_Probability-6.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 437--438
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 439--440
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-7.cpt'.
 
 (cpt_files/SDS_Probability-7.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 456--457
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 458--459
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 464--465
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 466--467
 []| [][][] 
  []
 
@@ -2557,7 +2557,7 @@ Overfull \hbox (87.96666pt too wide) in paragraph at lines 54--55
  []
 
 )
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 524--525
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 526--527
 []| [][][] 
  []
 
@@ -2568,100 +2568,100 @@ Missing character: There is no ñ in font Revx Neue Demo Regular/OT:script=latn;
 Missing character: There is no á in font Revx Neue Demo Regular/OT:script=latn;language=dflt;mapping=tex-text;!
 Missing character: There is no ó in font Revx Neue Demo Regular/OT:script=latn;language=dflt;mapping=tex-text;!
 )
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 530--531
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 532--533
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-10.cpt'.
 
 (cpt_files/SDS_Probability-10.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 543--544
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 545--546
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 547--548
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 549--550
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 560--561
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 562--563
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-11.cpt'.
 
 (cpt_files/SDS_Probability-11.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 564--565
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 566--567
 []| [][][] 
  []
 
 
-Overfull \hbox (1.63333pt too wide) in paragraph at lines 566--567
+Overfull \hbox (1.63333pt too wide) in paragraph at lines 568--569
 []  [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--567
+Underfull \hbox (badness 10000) in paragraph at lines 568--569
 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-12.cpt'.
 
 (cpt_files/SDS_Probability-12.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 579--580
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 581--582
 | [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 600--601
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 602--603
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-13.cpt'.
 
 (cpt_files/SDS_Probability-13.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 615--616
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 617--618
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-14.cpt'.
 
 (cpt_files/SDS_Probability-14.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 654--655
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 656--657
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-15.cpt'.
 
 (cpt_files/SDS_Probability-15.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 695--696
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 697--698
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 746--747
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 748--749
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-16.cpt'.
 
 (cpt_files/SDS_Probability-16.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 785--786
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 787--788
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-17.cpt'.
 
 (cpt_files/SDS_Probability-17.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 840--841
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 842--843
 | [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-18.cpt'.
 
 (cpt_files/SDS_Probability-18.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 855--856
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 857--858
 []| [][][] 
  []
 
@@ -2717,31 +2717,31 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
 )
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 872--873
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 874--875
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-20.cpt'.
 
 (cpt_files/SDS_Probability-20.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 881--882
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 883--884
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-21.cpt'.
 
 (cpt_files/SDS_Probability-21.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 910--911
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 912--913
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 917--918
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 919--920
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 923--924
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 925--926
 []| [][][] 
  []
 
@@ -2753,123 +2753,123 @@ Overfull \hbox (2.36778pt too wide) in paragraph at lines 4--24
  []
 
 )
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 951--952
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 953--954
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-23.cpt'.
 
 (cpt_files/SDS_Probability-23.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 966--967
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 968--969
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-24.cpt'.
 
 (cpt_files/SDS_Probability-24.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 988--989
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 990--991
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 994--995
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 996--997
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-25.cpt'.
 
 (cpt_files/SDS_Probability-25.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1022--1023
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1024--1025
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1028--1029
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1030--1031
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-26.cpt'.
 
 (cpt_files/SDS_Probability-26.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1048--1049
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1050--1051
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1061--1062
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1063--1064
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-27.cpt'.
 
 (cpt_files/SDS_Probability-27.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1084--1085
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1086--1087
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1095--1096
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1097--1098
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1112--1113
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1114--1115
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-28.cpt'.
 
 (cpt_files/SDS_Probability-28.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1130--1131
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1132--1133
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-29.cpt'.
 
 (cpt_files/SDS_Probability-29.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1161--1162
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1163--1164
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1202--1203
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1204--1205
 []| [][][] 
  []
 
 
-Overfull \hbox (1.63333pt too wide) in paragraph at lines 1204--1205
+Overfull \hbox (1.63333pt too wide) in paragraph at lines 1206--1207
 []  [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1204--1205
+Underfull \hbox (badness 10000) in paragraph at lines 1206--1207
 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-30.cpt'.
 
 (cpt_files/SDS_Probability-30.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1209--1210
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1211--1212
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-31.cpt'.
 
 (cpt_files/SDS_Probability-31.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1214--1215
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1216--1217
 []| [][][] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1233.
+(hyperref)                removing `math shift' on input line 1235.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1233.
+(hyperref)                removing `math shift' on input line 1235.
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1233--1234
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1235--1236
 []| [][][] 
  []
 
@@ -2881,12 +2881,12 @@ Overfull \hbox (2.44954pt too wide) in paragraph at lines 22--22
  []
 
 )
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1258--1259
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1260--1261
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1265--1266
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1267--1268
 []| [][][] 
  []
 
@@ -2899,128 +2899,140 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                 on input line 2.
 
 )
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1276--1277
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1278--1279
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-34.cpt'.
 
 (cpt_files/SDS_Probability-34.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1283--1284
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1285--1286
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-35.cpt'.
 
 [2] (cpt_files/SDS_Probability-35.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1288--1289
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1290--1291
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-36.cpt'.
 
 (cpt_files/SDS_Probability-36.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1301--1302
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1303--1304
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1344--1345
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1346--1347
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1367--1368
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1369--1370
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-37.cpt'.
 
 (cpt_files/SDS_Probability-37.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1377--1378
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1379--1380
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1383--1384
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1385--1386
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-38.cpt'.
 
 (cpt_files/SDS_Probability-38.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1390--1391
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1392--1393
 []| [][][] 
  []
 
 
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1407--1408
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1409--1410
 []| [][][] 
  []
 
 
-Overfull \hbox (1.63333pt too wide) in paragraph at lines 1410--1411
+Overfull \hbox (1.63333pt too wide) in paragraph at lines 1412--1413
 []  [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1410--1411
+Underfull \hbox (badness 10000) in paragraph at lines 1412--1413
 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-39.cpt'.
 
 (cpt_files/SDS_Probability-39.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1439--1440
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1441--1442
 | [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-40.cpt'.
 
 (cpt_files/SDS_Probability-40.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1451--1452
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1453--1454
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-41.cpt'.
 
 (cpt_files/SDS_Probability-41.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1473--1474
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1475--1476
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-42.cpt'.
 
 (cpt_files/SDS_Probability-42.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1510--1511
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1512--1513
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-43.cpt'.
 
 (cpt_files/SDS_Probability-43.cpt)
-Overfull \hbox (10.04999pt too wide) in paragraph at lines 1516--1517
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1530--1531
 | [][][] 
  []
 
-[3]
 \openout5 = `./cpt_files/SDS_Probability-44.cpt'.
 
- (cpt_files/SDS_Probability-44.cpt)
-Overfull \hbox (10.79999pt too wide) in paragraph at lines 1564--1565
+(cpt_files/SDS_Probability-44.cpt)
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1586--1587
 []| [][][] 
  []
 
+
+Overfull \hbox (10.04999pt too wide) in paragraph at lines 1618--1619
+[]| [][][] 
+ []
+
+[3]
 \openout5 = `./cpt_files/SDS_Probability-45.cpt'.
 
-(cpt_files/SDS_Probability-45.cpt)
-Overfull \hbox (10.79999pt too wide) in paragraph at lines 1591--1592
+ (cpt_files/SDS_Probability-45.cpt)
+Overfull \hbox (10.79999pt too wide) in paragraph at lines 1666--1667
 []| [][][] 
  []
 
 \openout5 = `./cpt_files/SDS_Probability-46.cpt'.
 
-(cpt_files/SDS_Probability-46.cpt
+(cpt_files/SDS_Probability-46.cpt)
+Overfull \hbox (10.79999pt too wide) in paragraph at lines 1693--1694
+[]| [][][] 
+ []
+
+\openout5 = `./cpt_files/SDS_Probability-47.cpt'.
+
+(cpt_files/SDS_Probability-47.cpt
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/RevxNeueDemo(0)/b/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -3052,13 +3064,13 @@ Package microtype Info: Character `\textquestiondown ' is missing
 (microtype)             in font `\TU/RevxNeueDemo(0)/b/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
 )
-Overfull \hbox (10.79999pt too wide) in paragraph at lines 1631--1632
+Overfull \hbox (10.79999pt too wide) in paragraph at lines 1733--1734
 | [][][] 
  []
 
-\openout5 = `./cpt_files/SDS_Probability-47.cpt'.
+\openout5 = `./cpt_files/SDS_Probability-48.cpt'.
 
-(cpt_files/SDS_Probability-47.cpt
+(cpt_files/SDS_Probability-48.cpt
 Overfull \hbox (1.33334pt too wide) in paragraph at lines 9--36
 []$[]$ $[]$ 
  []
@@ -3069,27 +3081,27 @@ Overfull \hbox (1.33334pt too wide) in paragraph at lines 42--65
  []
 
 )
-Overfull \hbox (10.79999pt too wide) in paragraph at lines 1699--1700
+Overfull \hbox (10.79999pt too wide) in paragraph at lines 1801--1802
 []| [][][] 
  []
 
 [4]
-Overfull \hbox (2.13333pt too wide) in paragraph at lines 1707--1708
+Overfull \hbox (2.13333pt too wide) in paragraph at lines 1809--1810
 []  [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1707--1708
+Underfull \hbox (badness 10000) in paragraph at lines 1809--1810
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1764--1770
+Underfull \hbox (badness 10000) in paragraph at lines 1866--1872
 
  []
 
 [5]
-Overfull \hbox (2.13333pt too wide) in paragraph at lines 1835--1836
+Overfull \hbox (2.13333pt too wide) in paragraph at lines 1937--1938
 []  [][][]
  []
 
@@ -3101,12 +3113,12 @@ Package logreq Info: Writing requests to 'SDS_Probability.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 59027 strings out of 410536
- 1362080 string characters out of 2820497
- 2569627 words of memory out of 3000000
- 79242 multiletter control sequences out of 15000+600000
+ 59072 strings out of 410536
+ 1363014 string characters out of 2820497
+ 2568760 words of memory out of 3000000
+ 79284 multiletter control sequences out of 15000+600000
  496722 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  108i,19n,120p,10707b,3846s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on SDS_Probability.xdv (6 pages, 620144 bytes).
+Output written on SDS_Probability.xdv (6 pages, 670992 bytes).

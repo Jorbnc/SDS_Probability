@@ -80,11 +80,11 @@
 \usetikzlibrary{math, angles, quotes, arrows.meta}
 
 % Configuración que conozco
-\setlist{noitemsep,itemindent=0pt,leftmargin=1.6em,nosep}
+\setlist{noitemsep,itemindent=0pt,leftmargin=1.8em,nosep}
 \setlist[itemize]{label*=\ding{223}}
 
 % Otra Configuración
-\arrayrulecolor{gray!60}
+\arrayrulecolor{black}
 \pagestyle{empty}
 \abovedisplayskip=1pt\belowdisplayskip=0pt\abovedisplayshortskip=0pt\belowdisplayshortskip=0pt
 
@@ -102,7 +102,6 @@
 	\fcolorbox{lightgray}{lightgray}{\parbox{\columnwidth}{\raggedright #1}}
 }
 
-
 \providecommand{\sectionbox}[1]{\fboxsep0.5em\hspace*{-1.5\fboxsep}%
  \fcolorbox{gray}{gray!3}{%
  \parbox{\columnwidth}{%
@@ -115,7 +114,7 @@
 
 % Espacio entre párrafos
 \setlength{\parskip}{2pt}
-\renewcommand{\arraystretch}{2}
+\renewcommand{\arraystretch}{1.5} % Tabular environments are properly displayed (haven't figured out why it doesn't work with 1)
 \renewcommand{\baselinestretch}{1}
 
 % Configuraciones de tablas
@@ -258,6 +257,9 @@
 \newcommand{\Blue}[1]{\textcolor{blue}{#1}}
 \newcommand{\Red}[1]{\textcolor{red}{#1}}
 \newcommand{\Green}[1]{\textcolor{green!65!black}{#1}}
+
+% Tikz Custom Figures
+\tikzset{pics/bar/.style 2 args={code={ \fill (-.1,0) rectangle (.1,#1) (0,#1) node[above,scale=1/2]{$#2$}; }}}
 
 % Distancia antes y después de cada {figure}
 \setlength{\intextsep}{5pt plus 2pt minus 2pt}
@@ -890,9 +892,9 @@ Let $B$ be any event $\then P(A \cap B)=P(A)P(B)$ for both cases $P(A)=0 \AND P(
 \begin{minipage}{0.25\linewidth}
 	\centering
 	\begin{tikzpicture}
-		\begin{axis}[hide axis, xmin=0, xmax=1, ymin=0, ymax=1, clip=false, width=3.25cm,height=3.25cm,]
-			\fill[draw=\ldraw, fill opacity=0.5, red!90!white] (0.27, 0.5) ellipse (9pt and 14pt);
-			\fill[draw=\ldraw, fill opacity=0.5, blue!90!white] (0.73, 0.5) ellipse (9pt and 14pt);
+		\begin{axis}[hide axis, xmin=0, xmax=1, ymin=0, ymax=1, clip=false, width=3.25cm,height=2.75cm,]
+			\fill[draw=\ldraw, fill opacity=0.5, red!90!white] (0.27, 0.5) ellipse (9pt and 10pt);
+			\fill[draw=\ldraw, fill opacity=0.5, blue!90!white] (0.73, 0.5) ellipse (9pt and 10pt);
 			\node at (0.25, 0.5) {$A$};
 			\node at (0.75, 0.5) {$B$};
 			\node at (0.1, 0.9) {$\Omega$};
@@ -1511,8 +1513,108 @@ A random variable is called discrete if its \textbf{range} is either finite or c
 
 \subsection{Probability Mass Functions \& Expectation}
 
-\sectionbox{\subsubsection{PMF}\topline
-$\then \displaystyle\sum_{x} P(X=x)=1$
+\sectionbox{\subsubsection{Probability Mass Function}\topline
+{\centering\fbox{%
+\begin{minipage}{0.70\linewidth}
+The function
+\centerexpr{$p_{X}(x)=P(X=x)=P({\omega:X(\omega)=x})$}\vspace{0.5mm}
+is called the Probability Mass Function (\textbf{PMF}) and assigns a probability to each numerical value of a Discrete Random Variable.
+\end{minipage}}\\}%
+\vspace{1.5mm}
+For simplicity, let $S=\Omega$ be the sample space. The PMF has the following properties:\vspace{0.5mm}
+\begin{itemize}
+	\item $p_{X}(x) \geq 0, x \in S$
+	\item $\displaystyle\sum_{x \in S} p_{X}(x)=1$
+	\item $\displaystyle\sum_{x \in A} p_{X}(x)=P(A), \; A\subseteq S$
+\end{itemize}
+}
+
+\sectionbox{\subsubsection{Graphs of PMF}\topline
+{
+\begin{minipage}{0.49\linewidth}
+	\centering
+	Sum of 2 rolls of a tetrahedral die. \vspace{1.5mm}\\
+	\begin{tikzpicture}[x=3mm, y=30mm] % (each unit on the x axis = 5mm, IDEM for the y axis)
+		\draw
+		  (0,0) edge[-] (10,0) % the main axis
+		  foreach[count=\i from 2] ~ in {1/16,2/16,3/16,4/16,3/16,2/16,1/16}{
+			(\i,0) pic[black]{bar={~}{~}} node[below]{$\i$} % 1st ~ = height, 2nd ~ = probability (label) above
+		  };
+		  \draw (1,0)node[below]{$1$}; \draw (9,0)node[below]{$9$};
+	\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.49\linewidth}
+	\centering
+	PMF of a categorical random variable.\vspace{1.5mm}\\
+	\begin{tikzpicture}[x=3mm, y=30mm] % (each unit on the x axis = 5mm, IDEM for the y axis)
+		\draw
+		  (0,0) edge[-] (6,0) % the main axis
+		  foreach[count=\i from 1] ~ in {4/16,2/16,3/16,1/16,3/16}{
+			(\i,0) pic[black]{bar={~}{}}
+		  };
+		  \draw (1,0)node[below]{$A$}; \draw (2,0)node[below]{$B$}; \draw (3,0)node[below]{$C$}; \draw (4,0)node[below]{$D$}; \draw (5,0)node[below]{$E$};
+	\end{tikzpicture}
+\end{minipage}
+}
+\par\vspace{2mm}
+{
+\begin{minipage}{0.49\linewidth}
+	\centering
+	$P(X=x)=\frac{1}{2^{x}}$, \quad for $x\in\mathbb{N}$.\vspace{1.5mm}\\
+	\begin{tikzpicture}[x=3mm, y=15mm] % (each unit on the x axis = 5mm, IDEM for the y axis)
+		\draw
+		  (0,0) edge[-] (8,0) % the main axis
+		  foreach[count=\i from 1] ~ in {1/2,1/4,1/16,1/32,1/64, 1/128}{
+			(\i,0) pic[black]{bar={~}{~}} node[below]{$\i$}
+		  };
+		  \draw (7,-.03)node[below]{$...$};
+	\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.49\linewidth}
+	\centering
+	Discrete Uniform Random Variable.\vspace{1.5mm}\\
+	\begin{tikzpicture}[x=3mm, y=30mm] % (each unit on the x axis = 5mm, IDEM for the y axis)
+		\draw
+		  (0,0) edge[-] (8,0) % the main axis
+		  foreach[count=\i from 1] ~ in {4/16,4/16,4/16,4/16,4/16,4/16,4/16}{
+			(\i,0) pic[black]{bar={~}{1/n}}
+		  };
+		  \draw (1,0)node[below]{$a$}; \draw (7,0)node[below]{$b$};
+	\end{tikzpicture}
+\end{minipage}
+}
+}
+
+\examplebox{
+Consider the experiment of tossing twice a fair tetrahedral die. Let $X$ be the product of the rolls, then:\vspace{1mm}\\
+\begin{minipage}{0.70\linewidth}
+	\centering
+	\begin{tikzpicture}[x=3mm, y=30mm] % (each unit on the x axis = 5mm, IDEM for the y axis)
+		\draw (0,0) edge[-] (17,0);
+		\foreach \i/\j in {1/{1/16},2/{2/16},3/{2/16},4/{3/16},6/{2/16},8/{2/16},9/{1/16},12/{2/16},16/{1/16}} {
+			\draw (\i, 0) pic[black]{bar={\j}{\j}};
+		}
+		\foreach \i in {1,...,16}{
+			\draw (\i,0)node[below]{$\i$};
+		}
+	\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.25\linewidth}
+	
+	\begin{tabular}{|c|cccc|}
+		\hline
+		$\times$  & 1 & 2 & 3 & 4 \\
+		\hline
+		1 & 1 & 2 & 3 & 4 \\ 
+		2 & 2 & 4 & 6 & 8 \\
+		3 & 3 & 6 & 9 & 12 \\
+		4 & 4 & 8 & 12 & 16 \\
+		\hline
+	\end{tabular}
+\end{minipage}\\
+\vspace{1mm}
+$p_{X}(4)=P(\{1,4\} \cup \{2,2\} \cup \{4,1\})=3/16$\\
+$p_{X}(5)=0$
 }
 
 
