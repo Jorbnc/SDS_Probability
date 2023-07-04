@@ -1,0 +1,36 @@
+\subsubsection{Linear Functions}\topline
+
+\[ f(x) = mx+b \]
+
+\textbf{Cost functions: } $f(\text{Level of Activity})=\text{Fixed Cost} + \text{Variable Cost}(\text{Level of Activity})$
+
+\begin{figure}[H]
+^^I\centering
+^^I\begin{tikzpicture}
+^^I^^I\begin{axis}[
+^^I^^I^^I^^I^^I1Quad,width=3.25cm,height=3.25cm,
+^^I^^I^^I^^I^^Iymin=0, ymax=1000, grid=both,
+^^I^^I^^I^^I^^Ixlabel = {km traveled}, x label style={at={(axis description cs:0.5,-0.2)}, anchor=north},
+^^I^^I^^I^^I^^Iylabel = {transportation cost}, y label style={at={(axis description cs:-0.45,.5)},rotate=90,anchor=south},
+^^I^^I^^I^^I^^I%ticklabel style = font={\fontsize{1}{1}\selectfont},
+^^I^^I^^I^^I^^I]
+^^I^^I^^I\addplot[blue, line width=0.25mm, domain=0:20]{500+14.5*x};
+^^I^^I\end{axis}
+^^I\end{tikzpicture}
+^^I\hspace{0.25cm}
+^^I\begin{tikzpicture}
+^^I^^I\begin{axis}[1Quad,width=3.25cm,height=3.25cm,
+^^I^^I^^I^^I^^Iymin=0,ymax=1000,
+^^I^^I^^I^^I^^Ixtick={10,20,30,40,50}, grid=both,
+^^I^^I^^I^^I^^Ixlabel = {cases stored}, x label style={at={(axis description cs:0.5,-0.2)}, anchor=north},
+^^I^^I^^I^^I^^Iylabel = {warehousing cost}, y label style={at={(axis description cs:-0.45,.5)},rotate=90,anchor=south},
+^^I^^I^^I^^I^^I]
+^^I^^I^^I\addplot[red, line width=0.25mm, domain=0:50]{800+3.5*x};
+^^I^^I\end{axis}
+^^I\end{tikzpicture}
+\end{figure}
+
+\textbf{Linear Regressions}
+
+fig
+^^E^^L 

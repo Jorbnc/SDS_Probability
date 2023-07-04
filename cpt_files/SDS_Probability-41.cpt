@@ -1,0 +1,21 @@
+\subsubsection{Function of Random Variables}\topline
+{\centering\fbox{%
+\begin{minipage}{0.67\linewidth}
+^^ILet $X$ be a random variable with values in $S \then X:\Omega \to S \subseteq \mathbb{R}$.\\
+^^ILet $g$ be a function defined on $S$ that maps into $T \then g:S \to T$.\\
+^^I$\then$ $g(X)$ depends on $X \then g(X)$ depends on the values in $\Omega$.\\
+^^I$\then Y=g(X)$ is a random variable with values in $T. \qed$
+\end{minipage}}\\}%
+\par\vspace{1.5mm}
+{\centering\fbox{%
+\begin{minipage}{0.67\linewidth}
+^^ILet $X$ and $Y$ be random variables.\\
+^^ILet $g(X,Y)$ be a function of the random variables $X$ and $Y$.\\
+^^I$\forall x,y:(X=x \land Y=y) \then g(X,Y)=g(x,y)$.\\
+^^IHowever, the converse is not necessarily true.
+\end{minipage}}\\}%
+\vspace{1mm}
+Let $X\in\{1,2\} \land Y\in\{3,4\}$ \\
+So\quad $X=2 \land Y=3 \then X+Y=5$\\
+but\quad $X+Y=5 \then (X=2 \land Y=3) \lor (X=1 \land Y=4) \qed$
+^^E^^L 

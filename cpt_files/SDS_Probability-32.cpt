@@ -1,3 +1,24 @@
 \subsubsection{Permutations}\topline
-\Red{Include the examples from the section '6 rolls of a die, all different results' in OneNote}
+Number of ways of ordering $n$ elements.\\
+\vspace{1mm}
+\begin{minipage}{0.60\linewidth}
+^^I\centering
+^^I\begin{tikzpicture}
+^^I^^I\draw[blue!70!white] (0.5,0.5) ellipse (14pt and 16pt);
+^^I^^I\fill[draw=\ldraw, fill opacity=0.75, blue!90!white] (0.25, 0.25) circle (1pt) (0.20, 0.80) circle (1pt) (0.45, 0.75) circle (1pt)
+^^I^^I^^I^^I^^I^^I^^I^^I^^I^^I^^I^^I^^I^^I^^I(0.50, 0.35) circle (1pt) (0.83, 0.33) circle (1pt) (0.75, 0.75) circle (1pt);
+^^I^^I\draw[blue!70!white] (1.5,0.25) rectangle (2.25,0.75) node[pos=.5] {$n$}
+^^I^^I^^I^^I^^I^^I^^I (2.25,0.25) rectangle (3,0.75) node[pos=.5] {$n-1$}
+^^I^^I^^I^^I^^I^^I^^I (3,0.25) rectangle (3.75,0.75) node[pos=.5] {$n-2$};
+^^I^^I\draw [red, very thin, ->] (0.22, 0.82) to [bend left=40] (1.875, 0.75);
+^^I^^I\draw [red, very thin, ->] (0.47, 0.77) to [bend left=40] (2.625, 0.75);
+^^I^^I\draw [red, very thin, ->] (0.77, 0.77) to [bend left=40] (3.375, 0.75);
+^^I^^I\node {};
+^^I^^I\draw (3.9,0.5) node[blue!70!white] {$\boldsymbol{...}$};
+^^I\end{tikzpicture}
+\end{minipage}%
+\begin{minipage}{0.35\linewidth}
+^^I\vspace{3mm}
+^^I\bcentering{n(n-1)(n-2)...(1)=n!}
+\end{minipage}%
 ^^E^^L 

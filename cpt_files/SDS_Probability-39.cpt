@@ -1,67 +1,26 @@
-\subsubsection{Quadratic Functions}\topline
-
-\[ f(x) = ax^2+bx+c \]
-
-\textbf{Profit: }
-
-
-\begin{figure}[H]
-^^I\begin{minipage}{0.5\linewidth}\centering
-^^I^^I
-^^I^^I\begin{tikzpicture}
-^^I^^I^^I\begin{axis}[
-^^I^^I^^I^^I^^I^^I1Quad,width=3.5cm,height=3.25cm,
-^^I^^I^^I^^I^^I^^Ixmin = 50,
-^^I^^I^^I^^I^^I^^Iymin=-60000, ymax=120000, grid=both,
-^^I^^I^^I^^I^^I^^Iscaled y ticks = false, scaled x ticks = false,
-^^I^^I^^I^^I^^I^^Iy tick label style={/pgf/number format/.cd, fixed, fixed zerofill, int detect,1000 sep={,},precision=2},
-^^I^^I^^I^^I^^I^^Ix tick label style={/pgf/number format/.cd, fixed, fixed zerofill, int detect, 1000 sep={},precision=2},
-^^I^^I^^I^^I^^I^^Ixlabel = {price}, x label style={at={(axis description cs:0.5,-0.2)}, anchor=north},
-^^I^^I^^I^^I^^I^^Iylabel = {\$}, y label style={at={(axis description cs:-0.35,.5)},rotate=90,anchor=south}
-^^I^^I^^I^^I^^I^^I]
-^^I^^I^^I^^I\addplot[blue, line width=0.25mm, domain=116:208]{-80*x^2 + 26000*x - 2000000};
-^^I^^I^^I\end{axis}
-^^I^^I\end{tikzpicture}
-^^I\end{minipage}
-^^I\begin{minipage}{0.5\linewidth}\centering
-^^I^^I\tiny{
-^^I^^I\begin{align*}
-^^I^^I^^I&V(p) = 20,000 - 80p \\
-^^I^^I^^I&R(p) = (20,000 - 80p)p \\
-^^I^^I^^I&C(p) = 500,000 + 75(20,000 - 80p) \\
-^^I^^I^^I&P(p) = R(p) - C(p)
-^^I^^I\end{align*}}
-^^I^^I\vfill
-^^I\end{minipage}
-\end{figure}
-
-
-\textbf{Parcel trucking}
-
-\begin{figure}[H]
-^^I\begin{minipage}{0.5\linewidth}\centering
-^^I^^I\begin{tikzpicture}
-^^I^^I^^I\begin{axis}[
-^^I^^I^^I^^I^^I^^I1Quad,width=3.5cm,height=3.25cm,
-^^I^^I^^I^^I^^I^^Iymin=-0, ymax=60, grid=both,
-^^I^^I^^I^^I^^I^^Iscaled y ticks = false, scaled x ticks = false,
-^^I^^I^^I^^I^^I^^Ixtick={250, 500, 750, 1000},
-^^I^^I^^I^^I^^I^^Iy tick label style={/pgf/number format/.cd, fixed, fixed zerofill, int detect,1000 sep={,},precision=2},
-^^I^^I^^I^^I^^I^^Ix tick label style={/pgf/number format/.cd, fixed, fixed zerofill, int detect, 1000 sep={},precision=2},
-^^I^^I^^I^^I^^I^^Ixlabel = {weight}, x label style={at={(axis description cs:0.5,-0.2)}, anchor=north},
-^^I^^I^^I^^I^^I^^Iylabel = {cost of order}, y label style={at={(axis description cs:-0.35,.5)},rotate=90,anchor=south}
-^^I^^I^^I^^I^^I^^I]
-^^I^^I^^I^^I\addplot[blue, line width=0.25mm, domain=0:1000]{33 + 0.067*x - 0.00005*x^2};
-^^I^^I^^I\end{axis}
-^^I^^I\end{tikzpicture}
-^^I\end{minipage}
-^^I\begin{minipage}{0.5\linewidth}\centering
-^^I^^I\tiny{
-^^I^^I\begin{align*}
-^^I^^I^^I&f(w) = 33 + 0.067w - 0.00005w^2
-^^I^^I\end{align*}}
-^^I^^I\vfill
-^^I\end{minipage}
-\end{figure}
-
+\subsubsection{Random Variable}\topline
+\vspace{0.75mm}
+\begin{minipage}{0.52\linewidth}
+^^I\centering
+^^I\begin{tikzpicture}
+^^I^^I\draw[thin, blue, fill=blue!2!white] (0mm,0mm) rectangle ++(12mm,8mm);
+^^I^^I\node at (2mm, 6mm) {$ \boldsymbol{\Omega} $}; \node at (6mm, 2.5mm) {$ \omega $}; \fill[blue] (6mm, 4mm) circle (1pt);
+^^I^^I\node at (17mm, 3mm) {$ \xrightarrow[X]{} $};
+^^I^^I\draw[thin, red, fill=red!2!white] (22mm,0mm) rectangle ++(12mm,8mm);
+^^I^^I\node at (24mm, 6mm) {$ \mathbb{R} $}; \node at (28mm, 2.25mm) {$ X(\omega) $}; \fill[red] (28mm, 4mm) circle (1pt);
+^^I\end{tikzpicture}
+\end{minipage}
+{\centering\fbox{%
+\begin{minipage}{0.40\linewidth}
+\textbf{Simple Definition:}\vspace{0.5mm}\\
+A random variable $X(\omega)$ or simply $X$ is a function defined on the sample space $\Omega$ that associates its outcomes to $\mathbb{R}$.
+\centerexpr{$ X\colon \Omega \to \mathbb{R}$}
+\end{minipage}}\\}%
+\vspace{1.25mm}
+\begin{itemize}
+^^I\item The term "random variable" can be misleading since it's a function rather than a variable.
+^^I\item More formally, it is a measurable function \;$X\colon \Omega \to R$\;\, from $\Omega$ into a measurable space $R$.
+^^I\item The outcome itself can be thought of as a random variable \\
+^^I^^I$\then \Omega=R, X(\omega)=\omega \rightarrow$ Identity function.
+\end{itemize}
 ^^E^^L 

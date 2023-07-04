@@ -1,2 +1,6 @@
-\subsubsection{Binomial Probabilities}\topline
+\subsubsection{Binomial Theorem}\topline
+Notice that in the expansion of:
+\centerexpr{$(x+y)^n = \underbrace{(x+y)...(x+y)}_{k\text{ factors}}\underbrace{(x+y)...(x+y)}_{n-k \text{ factors}}$}
+there are ${n \choose k}$ elements of the form $x^{k}y^{n-k}$. So, in order to account for the grouped sum of all terms:
+\bcentering{(x+y)^n = \sum_{k=0}^{n}\tbinom{n}{k}x^{k}y^{n-k} \qed}
 ^^E^^L 

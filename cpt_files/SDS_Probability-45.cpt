@@ -1,0 +1,26 @@
+\subsubsection{EOQ sawtooth plot}\topline
+The optimal policy becomes ordering $Q^*$ units of inventory every $T^*$ units of time.
+
+\begin{figure}[H]
+^^I\centering
+^^I\begin{tikzpicture}
+^^I^^I\tikzmath{\lastx = 5;}
+^^I^^I\begin{axis}[1Quad,width=9cm,height=3.25cm,ymin=0,ymax=1.3,xmin=0,xmax=\lastx + 0.25,
+^^I^^I^^I^^I^^Ixtick style={draw=none}, xtick={\lastx-0.5}, xticklabels={1 Year},
+^^I^^I^^I^^I^^Iytick={0.5,1}, yticklabels={,,}
+^^I^^I^^I^^I^^I]
+^^I^^I^^I% Sawtooth
+^^I^^I^^I\draw (0,0) foreach \x in {1,...,\lastx} {-- ++(0,1) -- ++(1,-1)} [blue, line width=0.2mm];
+^^I^^I^^I\draw (0,0.5) -- (\lastx,0.5) [darkblue, dashed, line width=0.02mm];
+^^I^^I^^I\draw [pen colour={annot},decorate,decoration={calligraphic brace,mirror,amplitude=5pt,raise=2pt},xshift=0pt,yshift=0pt]
+^^I^^I^^I(1,0) -- (2,0) node [annot,midway,yshift=-12.5pt, line width=5mm] {\tiny $T^*=\frac{Q^*}{D}$};
+^^I^^I^^I\draw (0,1) node[annot, left]{\tiny $Q^*$};
+^^I^^I^^I\draw (0,0.5) node[annot, left]{\tiny $\frac{Q^*}{2}$};
+^^I^^I^^I\draw (0.45,0.6) node[annot, above]{\tiny $D$};
+^^I^^I\end{axis}
+^^I^^I\end{tikzpicture}
+\end{figure}
+
+Notice that the total consumption of the last order may take place after the 1 year (unit time) period.
+
+^^E^^L 

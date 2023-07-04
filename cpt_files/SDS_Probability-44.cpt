@@ -1,0 +1,41 @@
+\subsubsection{EOQ formula derivation}\topline
+
+Since demand is deterministic, we can get rid of the Stockout Cost concept for now. So,
+
+\begin{align*}
+^^ITRC(Q) &= c_{t}\frac{D}{Q} + c_{e}\frac{Q}{2}
+\end{align*}
+
+From the first-order optimal condition (first derivative equals zero), we have
+
+\begin{align*}
+^^I0 &= \diff{}{Q}\left(\frac{c_{t}D}{Q}\right) + \diff{}{Q}\left(\frac{c_{e}Q}{2}\right) \\
+^^I0 &= -\frac{c_{t}D}{Q^2}+\frac{c_{e}}{2} \\
+^^I\Aboxed{Q^{*} &= \sqrt{\frac{2c_{t}D}{c_e}}}
+\end{align*}
+
+The $EOQ$ or $Q^*$ gives the minimum $TRC$ under deterministic conditions:
+
+\begin{figure}[H]
+^^I\centering
+^^I\begin{tikzpicture}
+^^I\tikzmath{\ce=5.5; \ct=400; \D=3000; \xmax=3000; \Qopt=660; \TRCopt=3633.18;}
+^^I\begin{axis}[1Quad, width=6cm, height=4cm, hide scale,
+^^I^^I^^I^^Iymin=0, ymax=10000, xmin=0, xmax=\xmax,
+^^I^^I^^I^^Ixtick={\Qopt}, xticklabels={$Q^*$},
+^^I^^I^^I^^Iytick={\TRCopt}, yticklabels={$TRC(Q^*)$},
+^^I^^I^^I^^Irestrict y to domain = 0:9500]
+^^I^^I% Functions
+^^I^^I\addplot[blue, line width=0.15mm, domain=0:\xmax]{\ct*(\D/x)};
+^^I^^I\addplot[red, line width=0.15mm, domain=0:\xmax]{\ce*(x/2)};
+^^I^^I\addplot[black, line width=0.25mm, domain=0:\xmax]{\ct*(\D/x) + \ce*(x/2)};
+^^I^^I% Nodes
+^^I^^I\node[circle,draw=black,fill=black!75,inner sep=0pt,minimum size=2pt] at (\Qopt,\TRCopt){};
+^^I^^I% Annotations
+^^I^^I\draw (\Qopt,\TRCopt)node[above, xshift=0.5mm]{\tiny Optimum};
+^^I^^I\draw (2500,250)node[blue, above]{\tiny Ordering/Setup Cost};
+^^I^^I\draw (2500,4500)node[red, above]{\tiny Holding Cost};
+^^I\end{axis}
+^^I\end{tikzpicture}
+\end{figure}
+^^E^^L 

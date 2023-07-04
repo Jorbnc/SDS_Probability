@@ -1,0 +1,11 @@
+\subsubsection{Notation}\topline
+\begin{itemize}
+^^I\item $X(\omega)$ or simply $X$ is a random variable, a function defined on the domain $\Omega$ with range in $\mathbb{R}$.
+^^I\item $x$ is an unspecified value of $X \then x$ is a real variable such that $x\in\mathbb{R}$.
+^^I\item $\{X=a\} \Blue{\iff} \{\omega:X(\omega) = a\}$, both imply an \textbf{event} in which $X$ takes the particular value $a$.
+^^I\item $\{X=a\} = \{\omega:X(\omega) = a\}$ only if the outcome itself is the random variable.
+^^I\item $\{X=x\}$ is an unspecified (variable) event in which $X$ takes the unspecified value $x$.
+^^I\item $P\boldsymbol{(}\{X=x\}\boldsymbol{)}$ is the probability of that unspecified event $\rightarrow$ We will write $P(X=x)$ for short.\\
+^^I$\then P\boldsymbol{(}\{\omega:X(\omega) = 3\}\boldsymbol{)} \Blue{\iff} P(X=3)$
+\end{itemize}
+^^E^^L 

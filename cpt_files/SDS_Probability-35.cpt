@@ -1,2 +1,4 @@
-\subsubsection{Partitions}\topline
+\subsubsection{Another approach for the number of subsets}\topline
+Notice that: $\sum_{k=0}^{n}{n \choose k}= {n \choose 0} + {n \choose 1} + ... + {n \choose n} = \text{Number of subsets}$, therefore:
+\bcentering{\sum_{k=0}^{n}\tbinom{n}{k}=(1+1)^n=2^n}
 ^^E^^L 

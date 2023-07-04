@@ -250,6 +250,7 @@
 								 /pgfplots/ytick scale label code/.code={}}
 }
 \newcommand{\bcentering}[1]{\par\vspace{1.5mm}{\centering \boxed{#1}\par}\vspace{1.5mm}}
+\newcommand{\centerexpr}[1]{\par\vspace{1.25mm}{\centering #1\par}\vspace{1.25mm}}
 \newcommand{\then}{\textcolor{blue}{\enspace\Rightarrow\enspace}}
 \newcommand{\AND}{\textcolor{blue!70!black}{\;\,\land\;\,}}
 \newcommand{\OR}{\textcolor{blue!70!black}{\;\,\lor\;\,}}
@@ -1185,15 +1186,6 @@ Assume each component has a probability $p$ of \textit{being up}.\\
 	\draw [thin] (p0) -- (A) (A) -- (p1) (p1) -- (p2) (p2) -- (B2) (B2) -- (p3) (p3) -- (B4) (B4) -- (p4) (p4) -- (p5) (p7) -- (p8);
 	% Other lines
 	\draw [thin] (p2) |- (B1) (p2) |- (B3) (p3) |- (B1) (p3) |- (B3) (p1) |- (B5) (B5) -| (p4) (p5) |- (C1) (p5) |- (C2) (C1) -| (p7) (C2) -| (p7); 
-
-	% \draw [thin]   (7) -|  (1)   (2) -|  (1)   (0) --  (1)   (2) --  (3);
-	% \draw [thin]   (4) --  (5)   (7) --  (8)   (9) -- (10)  (11) --  (6);
-	% \draw [thin]  (10) -|  (6)   (6) -- (11)   (5) -|  (6);
-	% \draw [thin]   (3) -- node  [name=sm1]{} (4);
-	% \draw [thin]   (4) -- node  [name=sa1]{} (5);
-	% \draw [thin]   (8) -- node  [name=sm2]{} (9);
-	% \draw [thin]   (9) -- node  [name=sa2]{} (10);
-	% \draw [thin] (sm1) -- (sm2) (sa1)--(sa2);
 \end{tikzpicture}\\}
 \vspace{1.5mm}
 The system can be seen as a serial configuration of 3 major groups: $A$, $B$, and $C$. $A$ has probability $p$ of being up, $C$ has probability $1-(1-p)^2$ of being up.
@@ -1238,17 +1230,288 @@ If there are $r$ stages and $n_i$ choices at stage $i$, then the number of choic
 }
 
 \sectionbox{\subsubsection{Permutations}\topline
-\Red{Include the examples from the section '6 rolls of a die, all different results' in OneNote}
+Number of ways of ordering $n$ elements.\\
+\vspace{1mm}
+\begin{minipage}{0.60\linewidth}
+	\centering
+	\begin{tikzpicture}
+		\draw[blue!70!white] (0.5,0.5) ellipse (14pt and 16pt);
+		\fill[draw=\ldraw, fill opacity=0.75, blue!90!white] (0.25, 0.25) circle (1pt) (0.20, 0.80) circle (1pt) (0.45, 0.75) circle (1pt)
+															(0.50, 0.35) circle (1pt) (0.83, 0.33) circle (1pt) (0.75, 0.75) circle (1pt);
+		\draw[blue!70!white] (1.5,0.25) rectangle (2.25,0.75) node[pos=.5] {$n$}
+							 (2.25,0.25) rectangle (3,0.75) node[pos=.5] {$n-1$}
+							 (3,0.25) rectangle (3.75,0.75) node[pos=.5] {$n-2$};
+		\draw [red, very thin, ->] (0.22, 0.82) to [bend left=40] (1.875, 0.75);
+		\draw [red, very thin, ->] (0.47, 0.77) to [bend left=40] (2.625, 0.75);
+		\draw [red, very thin, ->] (0.77, 0.77) to [bend left=40] (3.375, 0.75);
+		\node {};
+		\draw (3.9,0.5) node[blue!70!white] {$\boldsymbol{...}$};
+	\end{tikzpicture}
+\end{minipage}%
+\begin{minipage}{0.35\linewidth}
+	\vspace{3mm}
+	\bcentering{n(n-1)(n-2)...(1)=n!}
+\end{minipage}%
+}
+
+\examplebox{
+You're given the set of letters \{A,B,C,D,E\}. What is the probability that in a random five-letter string (each letter appears exactly once and all such
+strings are equally likely) the letters A and B are next to each other?\\
+\vspace{1mm}
+By fixing the pair "AB" we have 4 elements in the set $\then$ Probability = $\frac{4!\times2}{5!}$
 }
 
 \sectionbox{\subsubsection{Combinations}\topline
+Let ${n \choose k}$ be the total number of \textbf{unique combinations} of $k$ elements from a set of $n$ elements. To obtain this number we can proceed with:\\
+\vspace{1mm}
+{\centering
+$\underbrace{n(n-1)(n-2)...(n-k+1)}_{k\text{ elements}}=\frac{n!}{(n-k)!}$
+\\}
+\vspace{1mm}
+But by doing so, we are counting repeated subsets such as \{A,B,C,D,E\} and \{B,A,C,D,E\}. So, in order to avoid permutations, we divide by $k!$, therefore:
+\bcentering{\tbinom{n}{k}=\frac{n!}{k!(n-k)!}}
 }
 
-\sectionbox{\subsubsection{Binomial Probabilities}\topline
+\sectionbox{\subsubsection{Binomial Theorem}\topline
+Notice that in the expansion of:
+\centerexpr{$(x+y)^n = \underbrace{(x+y)...(x+y)}_{k\text{ factors}}\underbrace{(x+y)...(x+y)}_{n-k \text{ factors}}$}
+there are ${n \choose k}$ elements of the form $x^{k}y^{n-k}$. So, in order to account for the grouped sum of all terms:
+\bcentering{(x+y)^n = \sum_{k=0}^{n}\tbinom{n}{k}x^{k}y^{n-k} \qed}
+}
+
+\sectionbox{\subsubsection{Another approach for the number of subsets}\topline
+Notice that: $\sum_{k=0}^{n}{n \choose k}= {n \choose 0} + {n \choose 1} + ... + {n \choose n} = \text{Number of subsets}$, therefore:
+\bcentering{\sum_{k=0}^{n}\tbinom{n}{k}=(1+1)^n=2^n}
 }
 
 \sectionbox{\subsubsection{Partitions}\topline
+We have $n$ elements and we need to form $r$ groups of $n_i$ elements each such that $\sum n_i = n$.\\
+Let the following expression represent that idea:
+\centerexpr{$M=\tbinom{n}{n_1, n_2, ..., n_r}$}
+Notice that if we first take $n_1$ elements, we'd have $(n-n_1)$ from which we can take $n_2$, and so on...
+\begin{align*}
+	M &= \tbinom{n}{n_1} \tbinom{n-n_1}{n_2} \tbinom{n-n_1-n_2}{n_3}...\tbinom{n-n_1-...-n_{r-1}}{n_r} \\
+	M &= \frac{n!}{n_{1}!(n-n_1)!} \cdot \frac{(n-n_1)!}{n_2!(n-n_{1}-n_{2})!} \cdot ... \cdot \frac{(n - n_1 - n_2 - ... - n_{r-1})!}{n_r!(0!)}
+\end{align*}
+Then
+\bcentering{\tbinom{n}{n_1, n_2, ..., n_r}=\frac{n!}{n_{1}!n_{2}!...n_{r}!} \qed}
 }
+
+\examplebox{\subsubsection{Chess Tournament \& Item Distribution}\topline
+Consider the following two problems:
+\vspace{0.5mm}
+\begin{itemize}
+	\item \textbf{Chess tournament: } There are 10 competitors: 4 Russian, 3 from US, 2 from UK, 1 from Brazil. If the tournament result lists just the nationalities 
+			of the players, how many outcomes are possible?
+	\item \textbf{Distribution of items: } 10 items are to be distributed to 4 people such that they receive 4, 3, 2, 1 items, respectively, how many outcomes are possible?
+\end{itemize}
+\vspace{0.5mm}
+The answer for both problems is: $\frac{10!}{4!3!2!1!}$. What is the underlyig logic the relates them? \vspace{1.5mm}\\
+Imagine that the item distribution is executed in the following fashion: Person 1 is placed in front of the items (arranged in a row), then he/she is assigned
+items 1,2,3,4 or 1,2,4,3 or ... (i.e. the outcome is the same).\vspace{1.5mm}\\
+\begin{minipage}{0.55\linewidth}
+	\centering
+	\begin{tikzpicture}
+		% Squares
+		\draw[fill=yellow] (0,0) rectangle ++(4mm,4mm) node[pos=.5] {1}; 	\draw[fill=yellow] 	(0,-16mm) rectangle ++(4mm,4mm) node[pos=.5] {1};
+		\draw[fill=yellow] (4mm,0) rectangle ++(4mm,4mm) node[pos=.5] {2}; 	\draw[fill=yellow] 	(4mm,-16mm) rectangle ++(4mm,4mm) node[pos=.5] {2};
+		\draw[fill=yellow] (8mm,0) rectangle ++(4mm,4mm) node[pos=.5] {3}; 	\draw[fill=yellow] 	(8mm,-16mm) rectangle ++(4mm,4mm) node[pos=.5] {3};
+		\draw[fill=red] (12mm,0) rectangle ++(4mm,4mm) node[pos=.5] {4};	\draw[fill=red] 	(12mm,-16mm) rectangle ++(4mm,4mm) node[pos=.5] {4};
+		\draw[fill=red] (16mm,0) rectangle ++(4mm,4mm) node[pos=.5] {5};	\draw[fill=red] 	(16mm,-16mm) rectangle ++(4mm,4mm) node[pos=.5] {5};
+		\draw[fill=yellow] (20mm,0) rectangle ++(4mm,4mm) node[pos=.5] {6};	\draw[fill=yellow] 	(20mm,-16mm) rectangle ++(4mm,4mm) node[pos=.5] {6};
+		\draw[fill=red] (24mm,0) rectangle ++(4mm,4mm) node[pos=.5] {7};	\draw[fill=red] 	(24mm,-16mm) rectangle ++(4mm,4mm) node[pos=.5] {7};
+		\draw[fill=cyan] (28mm,0) rectangle ++(4mm,4mm) node[pos=.5] {8};	\draw[fill=cyan] 	(28mm,-16mm) rectangle ++(4mm,4mm) node[pos=.5] {8};
+		\draw[fill=green] (32mm,0) rectangle ++(4mm,4mm) node[pos=.5] {9};	\draw[fill=green] 	(32mm,-16mm) rectangle ++(4mm,4mm) node[pos=.5] {9};
+		\draw[fill=cyan] (36mm,0) rectangle ++(4mm,4mm) node[pos=.5] {10}; 	\draw[fill=cyan] 	(36mm,-16mm) rectangle ++(4mm,4mm) node[pos=.5] {10};
+		% Yellow balls
+		\foreach \i in {0,...,3} {
+			\draw[black, fill=yellow] (\the\numexpr 8 + \i*4\relax mm, -6mm) circle (2pt);
+		}
+		% Arrows
+		\draw [black, very thin, ->] (8 mm, -5.3mm) to (2mm, 0mm); \draw [black, very thin, ->] (8 mm, -6.7mm) to (6mm, -12mm);
+		\draw [black, very thin, ->] (12 mm, -5.3mm) to (6mm, 0mm); \draw [black, very thin, ->] (12 mm, -6.7mm) to (22mm, -12mm);
+		\draw [black, very thin, ->] (16 mm, -5.3mm) to (10mm, 0mm); \draw [black, very thin, ->] (16 mm, -6.7mm) to (2mm, -12mm);
+		\draw [black, very thin, ->] (20 mm, -5.3mm) to (22mm, 0mm); \draw [black, very thin, ->] (20 mm, -6.7mm) to (10mm, -12mm);
+	\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.40\linewidth}
+	Now imagine that the yellow balls represent the four russian players and also the four item assignments to person 1, for the chess and item distribution problems respectively.\vspace{1.5mm}\\
+	It doesn't matter which yellow ball is assigned first, different permutations for this particular arrangement/outcome are counted as one.
+\end{minipage}
+}
+
+\examplebox{\subsubsection{Ace distribution problem}\topline
+There's a 52-card deck, dealt (fairly) to four players. Find the probability that each player gets an ace.\\
+\vspace{1.5mm}
+\begin{minipage}{0.35\linewidth}
+	\centering
+	\begin{tikzpicture}[scale=0.5] % scale for better viewing
+		\foreach \i in {0,...,3} {
+			\foreach \j in {0,...,12} {
+			\draw[black, thin] (4mm*\j, -\i*8mm) rectangle ++(4mm,4mm);
+			}
+		}
+	\end{tikzpicture} 
+\end{minipage}
+\begin{minipage}{0.62\linewidth}
+	\textbf{Combinatorial Approach:} There are $4!$ ways of distributing the aces. For the remaining cards, there are $\frac{48!}{(12!)^{4}}$ possibilities.
+		$|\Omega|=\frac{52!}{(13!)^{4}} \then P(\text{Event})=4!\frac{48!}{(12!)^{4}}/\frac{52!}{(13!)^{4}}$
+	\vspace{2mm}\\
+	\textbf{Conditional Probability Approach:} After we randomly deliver the first ace to one of the players,
+		there are 39 slots out of the remaining 51 which do not correspond to the player that got an ace.\\
+		Following this logic $\then P(\text{Event})=(\frac{52}{52})(\frac{39}{51})(\frac{26}{50})(\frac{13}{49})$ 
+\end{minipage}
+}
+
+\sectionbox{\subsubsection{Multinomial Theorem}\topline
+The expansion of $(x_1 + x_2 + ... + x_r)^n$ will produce $r^n$ elements of the form $x_{1}^{n_1}x_{2}^{n_2}...x_{r}^{n_r}$ such that $\sum n_i = n$. 
+\vspace{1.5mm}\\
+Some of these elements are identical and can be grouped exactly as those from the expansion in the Binomial Theorem.
+\vspace{1.5mm}\\
+This is equivalent to listing all the possible divisions of $n$ distinct elements into $r$ distinct groups of sizes $n_1, n_2, . . . , n_r$,
+but there are more than one such combinations that add up to $n$, so:
+\bcentering{(x_{1} + x_{2} + ... + x_{r})^n = \sum_{\substack{(n_1,...,n_r): \\ n_1+...+n_r=n}} \tbinom{n}{n_1,n_2,...,n_r} x_{_1}^{n_1} x_{_2}^{n_2} ... x_{_r}^{n_r}}
+}
+
+\examplebox{\subsubsection{Counting committees}\topline
+We start with a pool $n$ of people. A chaired committee consists of $k \geq 1$ members, out of whom one member is designated as the chairperson. Then, the total number of possible chaired committees
+of any size is:\; $\sum_{k=1}^{n}k{n \choose k}$. On the other hand, we can also get to the result by first selecting a chairperson and then the committee: $n$ possibilities for the chairperson,
+$2^{n-1}$ possible subsets of $n-1$ (the empty set + the chairperson would make a $1$-man committee), so $\sum_{k=1}^{n}k{n \choose k} = n2^{n-1}$.
+}
+
+\sectionbox{\subsubsection{Binomial Probabilities}\topline
+Consider an experiment with a binary outcome (e.g. success/failure, yes/no, heads/tails, 0/1).\\
+Let $p$ be the probability of success $\then$ The probability of $k$ successes in $n$ \textbf{independent} trials is:
+\bcentering{P(k \text{ successes})=\tbinom{n}{k}p^k(1-p)^{n-k}}
+Also, notice that $\sum_{k=0}^{n} \tbinom{n}{k}p^k(1-p)^{n-k} = 1$
+}
+
+\examplebox{\subsubsection{Conditional coin tossing}\topline
+Find the probability that the 6th toss out of a total of 10 tosses is Heads, given that there are exactly 2 Heads out of the 10 tosses.\\
+\vspace{1.5mm}
+\textbf{Binomial Probabilistic Approach:}\\
+$P(B)=\tbinom{10}{2}p^2(1-p)^8, \; P(A \cap B)=P(H_{6}\cap \text{One more }H)=p\tbinom{9}{1}p(1-p)^8$\\
+$\then P(A|B)=\tbinom{9}{1}/\tbinom{10}{2}$\\
+\vspace{1.5mm}
+\textbf{Conditional Uniformity Approach:}
+\begin{itemize}
+	\item Consider $\Omega$ as the set of all possible sequences of 10-tosses.
+	\item Let $B$ be the subset that includes exactly 2 heads. There are $\tbinom{10}{2}$ such elements, all with probability $p^2(1-p)^8$.
+	\item Let $A$ be the subset that includes $H_6$. Since $H_6$ is fixed, there are $\tbinom{9}{1}$ ways for $A \cap B$ to occur.
+		And because these elements are included in $B$, they have probability $p^2(1-p)^8$.
+	\item $\then P(A|B)=\tbinom{9}{1}/\tbinom{10}{2}$
+\end{itemize}
+}
+
+
+\titlebox{\section{Discrete Random Variables}}
+
+\subsection{Random Variables}
+
+\sectionbox{\subsubsection{Random Variable}\topline
+\vspace{0.75mm}
+\begin{minipage}{0.52\linewidth}
+	\centering
+	\begin{tikzpicture}
+		\draw[thin, blue, fill=blue!2!white] (0mm,0mm) rectangle ++(12mm,8mm);
+		\node at (2mm, 6mm) {$ \boldsymbol{\Omega} $}; \node at (6mm, 2.5mm) {$ \omega $}; \fill[blue] (6mm, 4mm) circle (1pt);
+		\node at (17mm, 3mm) {$ \xrightarrow[X]{} $};
+		\draw[thin, red, fill=red!2!white] (22mm,0mm) rectangle ++(12mm,8mm);
+		\node at (24mm, 6mm) {$ \mathbb{R} $}; \node at (28mm, 2.25mm) {$ X(\omega) $}; \fill[red] (28mm, 4mm) circle (1pt);
+	\end{tikzpicture}
+\end{minipage}
+{\centering\fbox{%
+\begin{minipage}{0.40\linewidth}
+\textbf{Simple Definition:}\vspace{0.5mm}\\
+A random variable $X(\omega)$ or simply $X$ is a function defined on the sample space $\Omega$ that associates its outcomes to $\mathbb{R}$.
+\centerexpr{$ X\colon \Omega \to \mathbb{R}$}
+\end{minipage}}\\}%
+\vspace{1.25mm}
+\begin{itemize}
+	\item The term "random variable" can be misleading since it's a function rather than a variable.
+	\item More formally, it is a measurable function \;$X\colon \Omega \to R$\;\, from $\Omega$ into a measurable space $R$.
+	\item The outcome itself can be thought of as a random variable \\
+		$\then \Omega=R, X(\omega)=\omega \rightarrow$ Identity function.
+\end{itemize}
+}
+
+\sectionbox{\subsubsection{Notation}\topline
+\begin{itemize}
+	\item $X(\omega)$ or simply $X$ is a random variable, a function defined on the domain $\Omega$ with range in $\mathbb{R}$.
+	\item $x$ is an unspecified value of $X \then x$ is a real variable such that $x\in\mathbb{R}$.
+	\item $\{X=a\} \Blue{\iff} \{\omega:X(\omega) = a\}$, both imply an \textbf{event} in which $X$ takes the particular value $a$.
+	\item $\{X=a\} = \{\omega:X(\omega) = a\}$ only if the outcome itself is the random variable.
+	\item $\{X=x\}$ is an unspecified (variable) event in which $X$ takes the unspecified value $x$.
+	\item $P\boldsymbol{(}\{X=x\}\boldsymbol{)}$ is the probability of that unspecified event $\rightarrow$ We will write $P(X=x)$ for short.\\
+	$\then P\boldsymbol{(}\{\omega:X(\omega) = 3\}\boldsymbol{)} \Blue{\iff} P(X=3)$
+\end{itemize}
+}
+
+\sectionbox{\subsubsection{Function of Random Variables}\topline
+{\centering\fbox{%
+\begin{minipage}{0.67\linewidth}
+	Let $X$ be a random variable with values in $S \then X:\Omega \to S \subseteq \mathbb{R}$.\\
+	Let $g$ be a function defined on $S$ that maps into $T \then g:S \to T$.\\
+	$\then$ $g(X)$ depends on $X \then g(X)$ depends on the values in $\Omega$.\\
+	$\then Y=g(X)$ is a random variable with values in $T. \qed$
+\end{minipage}}\\}%
+\par\vspace{1.5mm}
+{\centering\fbox{%
+\begin{minipage}{0.67\linewidth}
+	Let $X$ and $Y$ be random variables.\\
+	Let $g(X,Y)$ be a function of the random variables $X$ and $Y$.\\
+	$\forall x,y:(X=x \land Y=y) \then g(X,Y)=g(x,y)$.\\
+	However, the converse is not necessarily true.
+\end{minipage}}\\}%
+\vspace{1mm}
+Let $X\in\{1,2\} \land Y\in\{3,4\}$ \\
+So\quad $X=2 \land Y=3 \then X+Y=5$\\
+but\quad $X+Y=5 \then (X=2 \land Y=3) \lor (X=1 \land Y=4) \qed$
+}
+
+\sectionbox{\subsubsection{Discrete Random Variable}\topline
+
+{\centering\fbox{%
+\begin{minipage}{0.76\linewidth}
+A random variable is called discrete if its \textbf{range} is either finite or countably infinite.
+\end{minipage}}\\}%
+\par\vspace{2mm}
+{
+\begin{minipage}{0.50\linewidth}
+	\centering
+	\begin{tikzpicture}
+		\draw[thin, blue, fill=blue!2!white] (0mm,0mm) rectangle ++(12mm,8mm);
+		\node at (3mm, 6mm) {$ HH $}; \node at (9mm, 6mm) {$ HT $}; \node at (3mm, 2mm) {$ TT $}; \node at (9mm, 2mm) {$ TH $};
+		\node at (20mm, 3mm) {$ \xrightarrow[X]{\text{Number of H}/3} $};
+		\draw[thin, red, fill=red!2!white] (28mm,0mm) rectangle ++(6mm,8mm);
+		\node at (31mm, 6.5mm) {$ 0 $}; \node at (31mm, 4mm) {$ 1/3 $}; \node at (31mm, 1.5mm) {$ 2/3 $};
+	\end{tikzpicture}\\
+	\[ \text{sgn}(\omega)=
+		\begin{cases}
+			-1, & \omega<0\\
+			0, & \omega=0\\
+			1, & \omega>0
+		\end{cases}
+	\]
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+	Experiment: 2 tosses of a coin.\\
+	Let $X$ be the number of heads divided by 3.\\
+	The range is finite: consists of 3 elements.
+	\vspace{6mm}\\
+	Experiment: Select $\omega : \omega \in [-1,1]$\\
+	Let $X=\text{sgn}(\omega)$\\
+	The domain is infinite, but the range is finite.
+\end{minipage}
+}
+}
+
+\subsection{Probability Mass Functions \& Expectation}
+
+\sectionbox{\subsubsection{PMF}\topline
+$\then \displaystyle\sum_{x} P(X=x)=1$
+}
+
 
 \end{multicols*}
 \newpage
@@ -1560,6 +1823,7 @@ Finally, we write the last term (9) and, therefore, we observe that:
 	& -(-1)^{n+1} \, P(A_{1}\cap A_{2}\cap A_{3}\cap A_{4}\cap... \cap A_{n+1})
 \end{flalign*}
 We have proven that the expression works for $n+1 \qed$
+
 \end{multicols*}
 
 \newpage
@@ -1568,13 +1832,19 @@ We have proven that the expression works for $n+1 \qed$
 \titlebox{\section{References:}} \vspace{1.75mm}
 \subsection{Books}
 2008 - Introduction to Probability (2nd ed.) - Dimitri P. Bertsekas \& John N. Tsitsiklis \\
-\url{https://stats.libretexts.org/Bookshelves/Probability_Theory/Probability_Mathematical_Statistics_and_Stochastic_Processes_(Siegrist)}
+\href{https://stats.libretexts.org/Bookshelves/Probability_Theory/Probability_Mathematical_Statistics_and_Stochastic_Processes_(Siegrist)}
+{2021 - Probability, Mathematical Statistics, and Stochastic Processes - Kyle Siegrist}
 \subsection{MIT OpenCourseWare}
 \url{https://www.youtube.com/playlist?list=PLUl4u3cNGP60A3XMwZ5sep719_nh95qOe}
 \subsection{Links}
+\textbf{Inclusion-Exclusion Principle}\\
 \url{https://math.stackexchange.com/questions/2587979/generalized-formula-for-the-probability-of-the-union-of-n-events-occurring}\\
 \url{https://people.maths.bris.ac.uk/~mb13434/incl_excl_n.pdf}\\
-\url{https://math.stackexchange.com/questions/1832686/probability-are-disjoint-events-independent}
+\textbf{Event Independence}\\
+\url{https://math.stackexchange.com/questions/1832686/probability-are-disjoint-events-independent}\\
+\textbf{Random Variables}\\
+\url{https://en.wikipedia.org/wiki/Random_variable}\\
+\href{https://stats.libretexts.org/Bookshelves/Probability_Theory/Probability_Mathematical_Statistics_and_Stochastic_Processes_(Siegrist)/02%3A_Probability_Spaces/2.02%3A_Events_and_Random_Variables#Random_Variables}{Siegrist: Random Variables}
 \end{multicols*}
 
 \end{document}

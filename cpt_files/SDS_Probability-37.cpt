@@ -1,26 +1,9 @@
-\subsubsection{EOQ sawtooth plot}\topline
-The optimal policy becomes ordering $Q^*$ units of inventory every $T^*$ units of time.
-
-\begin{figure}[H]
-^^I\centering
-^^I\begin{tikzpicture}
-^^I^^I\tikzmath{\lastx = 5;}
-^^I^^I\begin{axis}[1Quad,width=9cm,height=3.25cm,ymin=0,ymax=1.3,xmin=0,xmax=\lastx + 0.25,
-^^I^^I^^I^^I^^Ixtick style={draw=none}, xtick={\lastx-0.5}, xticklabels={1 Year},
-^^I^^I^^I^^I^^Iytick={0.5,1}, yticklabels={,,}
-^^I^^I^^I^^I^^I]
-^^I^^I^^I% Sawtooth
-^^I^^I^^I\draw (0,0) foreach \x in {1,...,\lastx} {-- ++(0,1) -- ++(1,-1)} [blue, line width=0.2mm];
-^^I^^I^^I\draw (0,0.5) -- (\lastx,0.5) [darkblue, dashed, line width=0.02mm];
-^^I^^I^^I\draw [pen colour={annot},decorate,decoration={calligraphic brace,mirror,amplitude=5pt,raise=2pt},xshift=0pt,yshift=0pt]
-^^I^^I^^I(1,0) -- (2,0) node [annot,midway,yshift=-12.5pt, line width=5mm] {\tiny $T^*=\frac{Q^*}{D}$};
-^^I^^I^^I\draw (0,1) node[annot, left]{\tiny $Q^*$};
-^^I^^I^^I\draw (0,0.5) node[annot, left]{\tiny $\frac{Q^*}{2}$};
-^^I^^I^^I\draw (0.45,0.6) node[annot, above]{\tiny $D$};
-^^I^^I\end{axis}
-^^I^^I\end{tikzpicture}
-\end{figure}
-
-Notice that the total consumption of the last order may take place after the 1 year (unit time) period.
-
+\subsubsection{Multinomial Theorem}\topline
+The expansion of $(x_1 + x_2 + ... + x_r)^n$ will produce $r^n$ elements of the form $x_{1}^{n_1}x_{2}^{n_2}...x_{r}^{n_r}$ such that $\sum n_i = n$.
+\vspace{1.5mm}\\
+Some of these elements are identical and can be grouped exactly as those from the expansion in the Binomial Theorem.
+\vspace{1.5mm}\\
+This is equivalent to listing all the possible divisions of $n$ distinct elements into $r$ distinct groups of sizes $n_1, n_2, . . . , n_r$,
+but there are more than one such combinations that add up to $n$, so:
+\bcentering{(x_{1} + x_{2} + ... + x_{r})^n = \sum_{\substack{(n_1,...,n_r): \\ n_1+...+n_r=n}} \tbinom{n}{n_1,n_2,...,n_r} x_{_1}^{n_1} x_{_2}^{n_2} ... x_{_r}^{n_r}}
 ^^E^^L 

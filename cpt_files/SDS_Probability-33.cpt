@@ -1,2 +1,10 @@
 \subsubsection{Combinations}\topline
+Let ${n \choose k}$ be the total number of \textbf{unique combinations} of $k$ elements from a set of $n$ elements. To obtain this number we can proceed with:\\
+\vspace{1mm}
+{\centering
+$\underbrace{n(n-1)(n-2)...(n-k+1)}_{k\text{ elements}}=\frac{n!}{(n-k)!}$
+\\}
+\vspace{1mm}
+But by doing so, we are counting repeated subsets such as \{A,B,C,D,E\} and \{B,A,C,D,E\}. So, in order to avoid permutations, we divide by $k!$, therefore:
+\bcentering{\tbinom{n}{k}=\frac{n!}{k!(n-k)!}}
 ^^E^^L 

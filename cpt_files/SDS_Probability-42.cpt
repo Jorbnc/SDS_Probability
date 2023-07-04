@@ -1,0 +1,36 @@
+\subsubsection{Discrete Random Variable}\topline
+
+{\centering\fbox{%
+\begin{minipage}{0.76\linewidth}
+A random variable is called discrete if its \textbf{range} is either finite or countably infinite.
+\end{minipage}}\\}%
+\par\vspace{2mm}
+{
+\begin{minipage}{0.50\linewidth}
+^^I\centering
+^^I\begin{tikzpicture}
+^^I^^I\draw[thin, blue, fill=blue!2!white] (0mm,0mm) rectangle ++(12mm,8mm);
+^^I^^I\node at (3mm, 6mm) {$ HH $}; \node at (9mm, 6mm) {$ HT $}; \node at (3mm, 2mm) {$ TT $}; \node at (9mm, 2mm) {$ TH $};
+^^I^^I\node at (20mm, 3mm) {$ \xrightarrow[X]{\text{Number of H}/3} $};
+^^I^^I\draw[thin, red, fill=red!2!white] (28mm,0mm) rectangle ++(6mm,8mm);
+^^I^^I\node at (31mm, 6.5mm) {$ 0 $}; \node at (31mm, 4mm) {$ 1/3 $}; \node at (31mm, 1.5mm) {$ 2/3 $};
+^^I\end{tikzpicture}\\
+^^I\[ \text{sgn}(\omega)=
+^^I^^I\begin{cases}
+^^I^^I^^I-1, & \omega<0\\
+^^I^^I^^I0, & \omega=0\\
+^^I^^I^^I1, & \omega>0
+^^I^^I\end{cases}
+^^I\]
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+^^IExperiment: 2 tosses of a coin.\\
+^^ILet $X$ be the number of heads divided by 3.\\
+^^IThe range is finite: consists of 3 elements.
+^^I\vspace{6mm}\\
+^^IExperiment: Select $\omega : \omega \in [-1,1]$\\
+^^ILet $X=\text{sgn}(\omega)$\\
+^^IThe domain is infinite, but the range is finite.
+\end{minipage}
+}
+^^E^^L 
