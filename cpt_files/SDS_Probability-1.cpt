@@ -21,8 +21,8 @@ In order to be a sample space, the set $\{\omega_1, \dots, \omega_n\}$ must meet
 ^^I^^I^^I^^Ionly marks,
 ^^I^^I^^I^^Imark=*,
 ^^I^^I^^I^^Imark size=2pt,   % size of the dots
-^^I^^I^^I^^Idraw=black,         % color of the dot border
-^^I^^I^^I^^Ifill=darkblue!80           % color of the dot interior
+^^I^^I^^I^^Idraw=blue,         % color of the dot border
+^^I^^I^^I^^Ifill=blue!60!white           % color of the dot interior
 ^^I^^I^^I]
 ^^I^^I^^Icoordinates {
 ^^I^^I^^I^^I(0.15, 0.15)(0.2, 0.3)(0.3, 0.5)(0.5, 0.75)(0.5, 0.2)

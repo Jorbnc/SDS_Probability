@@ -311,8 +311,8 @@ In order to be a sample space, the set $\{\omega_1, \dots, \omega_n\}$ must meet
 				only marks, 
 				mark=*, 
 				mark size=2pt,   % size of the dots
-				draw=black,         % color of the dot border
-				fill=darkblue!80           % color of the dot interior
+				draw=blue,         % color of the dot border
+				fill=blue!60!white           % color of the dot interior
 			] 
 			coordinates {
 				(0.15, 0.15)(0.2, 0.3)(0.3, 0.5)(0.5, 0.75)(0.5, 0.2)
@@ -348,8 +348,10 @@ Consider the experiment of flipping a coin. Let $H$ and $T$ be the events heads 
 		\tiny{$\Omega = \{H \land R, H \land \lnot R, T\}$} \\
 		\begin{tikzpicture}
 			\begin{axis}[hide axis, xmin=0, xmax=1, ymin=0, ymax=1, clip=false, width=3cm,height=3cm,]
-			\addplot [only marks, mark=*, mark size=5pt, draw=black, fill=darkblue!80] coordinates {(0.30, 0.70)(0.70, 0.70)(0.5, 0.30)};
-			\draw[line width=0.1mm] (axis cs:0,0) rectangle (axis cs:1,1);
+				\draw[blue, fill=blue!50!white] (0.30, 0.70) circle (5pt);
+				\draw[red, fill=red!50!white] (0.70, 0.70) circle (5pt);
+				\draw[green!50!black, fill=green!80!black] (0.5, 0.30) circle (5pt);
+				\draw[line width=0.1mm] (axis cs:0,0) rectangle (axis cs:1,1);
 			\end{axis}
 		\end{tikzpicture}
 \end{minipage}%
@@ -358,9 +360,10 @@ Consider the experiment of flipping a coin. Let $H$ and $T$ be the events heads 
 		\tiny{$\Omega = \{H \land R, T \land \lnot R, T\}$} \\
 		\begin{tikzpicture}
 			\begin{axis}[hide axis, xmin=0, xmax=1, ymin=0, ymax=1, clip=false, width=3cm,height=3cm,]
-			\addplot [only marks, mark=*, mark size=8pt, draw=black, fill=darkblue!80] coordinates {(0.65, 0.30)};
-			\addplot [only marks, mark=*, mark size=5pt, draw=black, fill=darkblue!75] coordinates {(0.25, 0.75)(0.65, 0.30)};
-			\draw[line width=0.1mm] (axis cs:0,0) rectangle (axis cs:1,1);
+				\draw[blue, fill=blue!50!white] (0.30, 0.70) circle (5pt);
+				\draw[green!50!black, fill=green!80!black] (0.65, 0.30) circle (6pt);
+				\draw[green!35!black, fill=green!55!black] (0.65, 0.30) circle (3pt);
+				\draw[line width=0.1mm] (axis cs:0,0) rectangle (axis cs:1,1);
 			\end{axis}
 		\end{tikzpicture}
 \end{minipage}%
@@ -582,7 +585,7 @@ Consider a finite $\Omega$ with a discrete uniform probability law. Let $B \neq 
 	\begin{tikzpicture}
 		\begin{axis}[hide axis, xmin=0, xmax=1, ymin=0, ymax=1, clip=false, width=3.5cm,height=2.75cm,]
 			\fill[draw=\ldraw, fill opacity=0.5, red!90!white] (0.65,0.30) ellipse (15pt and 8pt);
-			\fill[draw=\ldraw, fill opacity=0.5, blue!90!white] (0.10, 0.20) circle (2.5pt) (0.15, 0.80) circle (2.5pt) (0.45, 0.75) circle (2.5pt)
+			\draw[blue, fill=blue!60!white] (0.10, 0.20) circle (2.5pt) (0.15, 0.80) circle (2.5pt) (0.45, 0.75) circle (2.5pt)
 																(0.50, 0.35) circle (2.5pt) (0.83, 0.33) circle (2.5pt) (0.80, 0.85) circle (2.5pt)
 																(0.25, 0.45) circle (2.5pt) (0.63, 0.17) circle (2.5pt);
 			\draw[line width=0.05mm] (axis cs:0,0) rectangle (axis cs:1,1);
