@@ -31,7 +31,7 @@
 \begin{minipage}{0.66\linewidth}
 ^^I\begin{align*}
 ^^I^^IP(A_{i}|B) &= \frac{P(A_{i} \cap B)}{P(B)} \\
-^^I^^I^^I \Aboxed{P(A_{i}|B) &= \frac{P(A)P(B|A_{i})}{\sum_{j}P(A_j)P(B|A_j)}}
+^^I^^I^^I \Aboxed{P(A_{i}|B) &= \frac{P(A_{i})P(B|A_{i})}{\sum_{j}P(A_j)P(B|A_j)}}
 ^^I\end{align*}
 \end{minipage}\vspace{1.5mm}\\
 Check the diagrams: \url{https://en.wikipedia.org/wiki/Bayes%27_theorem#Random_variables}
